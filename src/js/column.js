@@ -204,7 +204,7 @@ Column.prototype.createElement = function (){
 Column.prototype.createGroupElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-col-group-cols");
+	el.classList.add("tabulator-col__group");
 
 	return el;
 };
@@ -658,7 +658,7 @@ Column.prototype._formatColumnHeaderTitle = function(el, title){
 
 //build header element for column group
 Column.prototype._buildGroupHeader = function(){
-	this.element.classList.add("tabulator-col-group");
+	this.element.classList.add("tabulator-col--group");
 	this.element.setAttribute("role", "columngroup");
 	this.element.setAttribute("aria-title", this.definition.title);
 
