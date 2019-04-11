@@ -103,7 +103,7 @@ ResizeColumns.prototype._checkResizability = function(column){
 ResizeColumns.prototype._mouseDown = function(e, column, handle){
 	var self = this;
 
-	self.table.element.classList.add("tabulator-block-select");
+	self.table.element.classList.add("tabulator--block-select");
 
 	function mouseMove(e){
 		self.table.columnManager.tempScrollBlock();
@@ -132,7 +132,7 @@ ResizeColumns.prototype._mouseDown = function(e, column, handle){
 		handle.removeEventListener("touchmove", mouseMove);
 		handle.removeEventListener("touchend", mouseUp);
 
-		self.table.element.classList.remove("tabulator-block-select");
+		self.table.element.classList.remove("tabulator--block-select");
 
 		if(self.table.options.persistentLayout && self.table.modExists("persistence", true)){
 			self.table.modules.persistence.save("columns");

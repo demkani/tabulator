@@ -160,7 +160,7 @@ MoveColumns.prototype.startMove = function(e, column){
 	this.moving = column;
 	this.startX = (this.touchMove ? e.touches[0].pageX : e.pageX) - Tabulator.prototype.helpers.elOffset(element).left;
 
-	this.table.element.classList.add("tabulator-block-select");
+	this.table.element.classList.add("tabulator--block-select");
 
 	//create placeholder
 	this.placeholderElement.style.width = column.getWidth() + "px";
@@ -231,7 +231,7 @@ MoveColumns.prototype.endMove = function(e){
 		this.placeholderElement.parentNode.removeChild(this.placeholderElement);
 		this.hoverElement.parentNode.removeChild(this.hoverElement);
 
-		this.table.element.classList.remove("tabulator-block-select");
+		this.table.element.classList.remove("tabulator--block-select");
 
 		if(this.toCol){
 			this.table.columnManager.moveColumn(this.moving, this.toCol, this.toColAfter);

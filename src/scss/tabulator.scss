@@ -60,9 +60,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         }
     }
 
-    &.tabulator-block-select {
-        user-select: none;
-    }
 
     //scrolling element to hold table
     .tabulator-tableHolder {
@@ -148,6 +145,14 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         }
     }
 }
+
+// tabulator variant when moving or resizing a column or row
+.tabulator--block-select {
+	user-select: none;
+}
+
+
+
 
 //column header containing element
 .tabulator-header {

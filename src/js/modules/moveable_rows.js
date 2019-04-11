@@ -261,7 +261,7 @@ MoveRows.prototype.startMove = function(e, row){
 
 	this.moving = row;
 
-	this.table.element.classList.add("tabulator-block-select");
+	this.table.element.classList.add("tabulator--block-select");
 
 	//create placeholder
 	this.placeholderElement.style.width = row.getWidth() + "px";
@@ -330,7 +330,7 @@ MoveRows.prototype.endMove = function(e){
 
 		this.hoverElement.parentNode.removeChild(this.hoverElement);
 
-		this.table.element.classList.remove("tabulator-block-select");
+		this.table.element.classList.remove("tabulator--block-select");
 
 		if(this.toRow){
 			this.table.rowManager.moveRow(this.moving, this.toRow, this.toRowAfter);
