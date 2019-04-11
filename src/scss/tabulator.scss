@@ -52,81 +52,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     -o-transform: translatez(0);
     transform: translatez(0);
 
-    &[tabulator-layout="fitDataFill"] {
-        .tabulator-tableHolder {
-            .tabulator-table {
-                min-width: 100%;
-            }
-        }
-    }
-
-
-    //scrolling element to hold table
-    .tabulator-tableHolder {
-        position: relative;
-        width: 100%;
-        white-space: nowrap;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-
-        &:focus {
-            outline: none;
-        }
-
-        //default placeholder element
-        .tabulator-placeholder {
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-
-            &[tabulator-render-mode="virtual"] {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-            }
-
-            width: 100%;
-
-            span {
-                display: inline-block;
-
-                margin: 0 auto;
-                padding: 10px;
-
-                color: #ccc;
-                font-weight: bold;
-                font-size: 20px;
-            }
-        }
-
-        //element to hold table rows
-        .tabulator-table {
-            position: relative;
-            display: inline-block;
-            background-color: $rowBackgroundColor;
-            white-space: nowrap;
-            overflow: visible;
-            color: $rowTextColor;
-
-            //row element
-            .tabulator-row {
-                &.tabulator-calcs {
-                    font-weight: bold;
-                    background: darken($rowAltBackgroundColor, 5%) !important;
-
-                    &.tabulator-calcs-top {
-                        border-bottom: 2px solid $rowBorderColor;
-                    }
-
-                    &.tabulator-calcs-bottom {
-                        border-top: 2px solid $rowBorderColor;
-                    }
-                }
-            }
-        }
-    }
-
     //column resize handles
     .tabulator-col-resize-handle {
         position: absolute;
@@ -146,13 +71,80 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-// tabulator variant when moving or resizing a column or row
-.tabulator--block-select {
-	user-select: none;
+//scrolling element to hold table
+.tabulator-table-holder {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &:focus {
+        outline: none;
+    }
 }
 
+//default placeholder element
+.tabulator-placeholder {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 
+    &[tabulator-render-mode="virtual"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
 
+    width: 100%;
+
+    span {
+        display: inline-block;
+
+        margin: 0 auto;
+        padding: 10px;
+
+        color: #ccc;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+//element to hold table rows
+.tabulator-table {
+    position: relative;
+    display: inline-block;
+    background-color: $rowBackgroundColor;
+    white-space: nowrap;
+    overflow: visible;
+    color: $rowTextColor;
+
+    [tabulator-layout="fitDataFill"] & {
+        min-width: 100%;
+    }
+
+    //row element
+    .tabulator-row {
+        &.tabulator-calcs {
+            font-weight: bold;
+            background: darken($rowAltBackgroundColor, 5%) !important;
+
+            &.tabulator-calcs-top {
+                border-bottom: 2px solid $rowBorderColor;
+            }
+
+            &.tabulator-calcs-bottom {
+                border-top: 2px solid $rowBorderColor;
+            }
+        }
+    }
+}
+
+// tabulator variant when moving or resizing a column or row
+.tabulator--block-select {
+    user-select: none;
+}
 
 //column header containing element
 .tabulator-header {

@@ -46,7 +46,7 @@ var RowManager = function(table){
 RowManager.prototype.createHolderElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-tableHolder");
+	el.classList.add("tabulator-table-holder");
 	el.setAttribute("tabindex", 0);
 
 	return el;
