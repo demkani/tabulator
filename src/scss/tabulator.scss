@@ -566,16 +566,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-    &.tabulator-group-visible {
-        .tabulator-arrow {
-            margin-right: 10px;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 6px solid $sortArrowActive;
-            border-bottom: 0;
-        }
-    }
-
     &.tabulator-group-level-1 {
         padding-left: 30px;
     }
@@ -612,6 +602,16 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     span {
         margin-left: 10px;
         color: #d00;
+    }
+}
+
+.tabulator-row--group--visible {
+    .tabulator-arrow {
+        margin-right: 10px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid $sortArrowActive;
+        border-bottom: 0;
     }
 }
 
