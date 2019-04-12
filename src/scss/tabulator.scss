@@ -51,24 +51,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     -ms-transform: translatez(0);
     -o-transform: translatez(0);
     transform: translatez(0);
-
-    //column resize handles
-    .tabulator-col-resize-handle {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 5px;
-
-        &.prev {
-            left: 0;
-            right: auto;
-        }
-
-        &:hover {
-            cursor: ew-resize;
-        }
-    }
 }
 
 //scrolling element to hold table
@@ -191,10 +173,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
         .tabulator-row {
             background: lighten($headerBackgroundColor, 5%) !important;
-
-            .tabulator-col-resize-handle {
-                display: none;
-            }
         }
 
         border-top: 1px solid $rowBorderColor;
@@ -426,10 +404,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
         .tabulator-row {
             background: lighten($footerBackgroundColor, 5%) !important;
-
-            .tabulator-col-resize-handle {
-                display: none;
-            }
         }
 
         border-bottom: 1px solid $rowBorderColor;
@@ -615,6 +589,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
+// Wrapper for hideable content
 .tabulator-responsive-collapse {
     box-sizing: border-box;
 
@@ -943,4 +918,29 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         color: $rowTextColor;
         font-weight: bold;
     }
+}
+
+// column resize handles (on the right side)
+.tabulator__col-resize-handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+
+    &:hover {
+        cursor: ew-resize;
+    }
+
+    // inside header and footer
+    .tabulator-header &,
+    .tabulator-footer & {
+        display: none;
+    }
+}
+
+// column resize handles (on the left side)
+.tabulator__col-resize-handle--prev {
+    left: 0;
+    right: auto;
 }
