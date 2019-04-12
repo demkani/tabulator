@@ -692,7 +692,7 @@ Edit.prototype.editors = {
 						});
 
 						if(item === currentItem){
-							el.classList.add("active");
+							el.classList.add("tabulator-edit-select-list-item--active");
 						}
 					}
 
@@ -717,7 +717,7 @@ Edit.prototype.editors = {
 		function setCurrentItem(item){
 
 			if(currentItem && currentItem.element){
-				currentItem.element.classList.remove("active");
+				currentItem.element.classList.remove("tabulator-edit-select-list-item--active");
 			}
 
 
@@ -725,7 +725,7 @@ Edit.prototype.editors = {
 			input.value = item.label === "&nbsp;" ? "" : item.label;
 
 			if(item.element){
-				item.element.classList.add("active");
+				item.element.classList.add("tabulator-edit-select-list-item--active");
 			}
 		}
 
@@ -1024,12 +1024,12 @@ Edit.prototype.editors = {
 
 					if(intialLoad && item.value == initialValue){
 						input.value = item.title;
-						item.element.classList.add("active");
+						item.element.classList.add("tabulator-edit-select-list-item--active");
 						current = true;
 					}
 
 					if(item === currentItem){
-						item.element.classList.add("active");
+						item.element.classList.add("tabulator-edit-select-list-item--active");
 						current = true;
 					}
 				}
@@ -1045,13 +1045,13 @@ Edit.prototype.editors = {
 
 		function setCurrentItem(item, showInputValue){
 			if(currentItem && currentItem.element){
-				currentItem.element.classList.remove("active");
+				currentItem.element.classList.remove("tabulator-edit-select-list-item--active");
 			}
 
 			currentItem = item;
 
 			if(item && item.element){
-				item.element.classList.add("active");
+				item.element.classList.add("tabulator-edit-select-list-item--active");
 			}
 		}
 
