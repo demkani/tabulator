@@ -101,7 +101,7 @@ Group.prototype.wipe = function(){
 Group.prototype.createElements = function(){
 	this.element = document.createElement("div");
 	this.element.classList.add("tabulator-row");
-	this.element.classList.add("tabulator-group");
+	this.element.classList.add("tabulator-row--group");
 	this.element.classList.add("tabulator-group-level-" + this.level);
 	this.element.setAttribute("role", "rowgroup");
 
