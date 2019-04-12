@@ -520,11 +520,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         cursor: pointer;
     }
 
-    &.tabulator-row-moving {
-        border: 1px solid #000;
-        background: #fff;
-    }
-
     &.tabulator-moving {
         position: absolute;
 
