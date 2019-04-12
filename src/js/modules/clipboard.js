@@ -681,10 +681,10 @@ Clipboard.prototype.generateHTML = function (rows, columns, calcs, config, param
 
 	//lookup row styles
 	if(window.getComputedStyle){
-		oddRow = this.table.element.querySelector(".tabulator-row-odd:not(.tabulator-row--group):not(.tabulator-calcs)");
-		evenRow = this.table.element.querySelector(".tabulator-row-even:not(.tabulator-row--group):not(.tabulator-calcs)");
-		calcRow = this.table.element.querySelector(".tabulator-row.tabulator-calcs");
-		firstRow = this.table.element.querySelector(".tabulator-row:not(.tabulator-row--group):not(.tabulator-calcs)");
+		oddRow = this.table.element.querySelector(".tabulator-row-odd:not(.tabulator-row--group):not(.tabulator-row--calcs)");
+		evenRow = this.table.element.querySelector(".tabulator-row--even:not(.tabulator-row--group):not(.tabulator-row--calcs)");
+		calcRow = this.table.element.querySelector(".tabulator-row.tabulator-row--calcs");
+		firstRow = this.table.element.querySelector(".tabulator-row:not(.tabulator-row--group):not(.tabulator-row--calcs)");
 		firstGroup = this.table.element.getElementsByClassName("tabulator-row--group")[0];
 
 		if(firstRow){

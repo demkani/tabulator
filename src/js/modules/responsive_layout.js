@@ -59,7 +59,7 @@ ResponsiveLayout.prototype.layoutRow = function(row){
 
 	el.classList.add("tabulator-responsive-collapse");
 
-	if(!rowEl.classList.contains("tabulator-calcs")){
+	if(!rowEl.classList.contains("tabulator-row--calcs")){
 		row.modules.responsiveLayout = {
 			element:el,
 		};

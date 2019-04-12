@@ -105,22 +105,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     [tabulator-layout="fitDataFill"] & {
         min-width: 100%;
     }
-
-    //row element
-    .tabulator-row {
-        &.tabulator-calcs {
-            font-weight: bold;
-            background: darken($rowAltBackgroundColor, 5%) !important;
-
-            &.tabulator-calcs-top {
-                border-bottom: 2px solid $rowBorderColor;
-            }
-
-            &.tabulator-calcs-bottom {
-                border-top: 2px solid $rowBorderColor;
-            }
-        }
-    }
 }
 
 // tabulator variant when moving or resizing a column or row
@@ -170,10 +154,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         min-width: 400%;
 
         background: lighten($headerBackgroundColor, 5%) !important;
-
-        .tabulator-row {
-            background: lighten($headerBackgroundColor, 5%) !important;
-        }
 
         border-top: 1px solid $rowBorderColor;
         border-bottom: 1px solid $headerBorderColor;
@@ -402,10 +382,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
         background: lighten($footerBackgroundColor, 5%) !important;
 
-        .tabulator-row {
-            background: lighten($footerBackgroundColor, 5%) !important;
-        }
-
         border-bottom: 1px solid $rowBorderColor;
         border-top: 1px solid $rowBorderColor;
 
@@ -476,23 +452,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     min-height: $textSize + ($headerMargin * 2);
     background-color: $rowBackgroundColor;
 
-    &.tabulator-row-even {
-        background-color: $rowAltBackgroundColor;
-    }
-
-    &.tabulator-selectable:hover {
-        background-color: $rowHoverBackground;
-        cursor: pointer;
-    }
-
-    &.tabulator-selected {
-        background-color: $rowSelectedBackground;
-    }
-
-    &.tabulator-selected:hover {
-        background-color: $rowSelectedBackgroundHover;
-        cursor: pointer;
-    }
 
     &.tabulator-moving {
         position: absolute;
@@ -520,7 +479,60 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
             border-left: 2px solid $rowBorderColor;
         }
     }
+
+    // inside 'tabulator-header'
+    .tabulator-header & {
+        background: lighten($headerBackgroundColor, 5%) !important;
+    }
+    // inside 'tabulator-footer'
+    .tabulator-footer & {
+        background: lighten($footerBackgroundColor, 5%) !important;
+    }
 }
+
+
+.tabulator-row--even {
+    background-color: $rowAltBackgroundColor;
+}
+
+.tabulator-row--selectable:hover {
+    background-color: $rowHoverBackground;
+    cursor: pointer;
+}
+
+.tabulator-row--selected {
+    background-color: $rowSelectedBackground;
+    
+    &:hover {
+        background-color: $rowSelectedBackgroundHover;
+        cursor: pointer;
+    }
+}
+
+
+.tabulator-row--calcs {
+    font-weight: bold;
+    background: darken($rowAltBackgroundColor, 5%) !important;
+
+}
+
+.tabulator-row--calcs--top {
+    border-bottom: 2px solid $rowBorderColor;
+}
+
+.tabulator-row--calcs--bottom {
+    border-top: 2px solid $rowBorderColor;
+}
+
+
+
+
+
+
+
+
+
+
 
 //row grouping element
 .tabulator-row--group {
