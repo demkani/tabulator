@@ -525,8 +525,8 @@ Format.prototype.formatters = {
 
 	//row handle
 	handle:function(cell, formatterParams, onRendered){
-		cell.getElement().classList.add("tabulator-row-handle");
-		return "<div class='tabulator-row-handle-box'><div class='tabulator-row-handle-bar'></div><div class='tabulator-row-handle-bar'></div><div class='tabulator-row-handle-bar'></div></div>";
+		cell.getElement().classList.add("tabulator-cell--row-handle");
+		return "<div class='tabulator-cell--row-handle__box'><div class='tabulator-cell--row-handle__bar'></div><div class='tabulator-cell--row-handle__bar'></div><div class='tabulator-cell--row-handle__bar'></div></div>";
 	},
 
 	responsiveCollapse:function(cell, formatterParams, onRendered){
@@ -555,7 +555,7 @@ Format.prototype.formatters = {
 		el.classList.add("tabulator-responsive-collapse-toggle");
 		el.innerHTML = "<span class='tabulator-responsive-collapse-toggle__open'>+</span><span class='tabulator-responsive-collapse-toggle__close'>-</span>";
 
-		cell.getElement().classList.add("tabulator-row-handle");
+		cell.getElement().classList.add("tabulator-cell--row-handle");
 
 		if(self.table.options.responsiveLayoutCollapseStartOpen){
 			open = true;

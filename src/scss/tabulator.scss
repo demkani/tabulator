@@ -634,31 +634,30 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
             display: none;
         }
     }
+}
 
-    //movable row handle
-    &.tabulator-row-handle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+//movable row handle
+.tabulator-cell--row-handle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-        -moz-user-select: none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
-        -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
 
-        //handle holder
-        .tabulator-row-handle-box {
-            width: 80%;
-
-            //Hamburger element
-            .tabulator-row-handle-bar {
-                width: 100%;
-                height: 3px;
-                margin-top: 2px;
-                background: #666;
-            }
-        }
-    }
+//handle holder
+.tabulator-cell--row-handle__box {
+    width: 80%;
+}
+//Hamburger element
+.tabulator-cell--row-handle__bar {
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+    background: #666;
 }
 
 .tabulator-data-tree-branch {
@@ -769,7 +768,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-
 // - close toggle
 .tabulator-responsive-collapse-toggle__close {
     display: none;
@@ -782,14 +780,11 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
 // + open toggle
 .tabulator-responsive-collapse-toggle__open {
-    
     // inside 'opened' toggle
     .tabulator-responsive-collapse-toggle--open & {
         display: none;
     }
 }
-
-
 
 .tabulator-traffic-light {
     display: inline-block;
