@@ -767,21 +767,29 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     &:hover {
         opacity: 0.7;
     }
+}
 
-    &.open {
-        .tabulator-responsive-collapse-toggle-close {
-            display: initial;
-        }
 
-        .tabulator-responsive-collapse-toggle-open {
-            display: none;
-        }
+// - close toggle
+.tabulator-responsive-collapse-toggle__close {
+    display: none;
+
+    // inside 'opened' toggle
+    .tabulator-responsive-collapse-toggle--open & {
+        display: initial;
     }
+}
 
-    .tabulator-responsive-collapse-toggle-close {
+// + open toggle
+.tabulator-responsive-collapse-toggle__open {
+    
+    // inside 'opened' toggle
+    .tabulator-responsive-collapse-toggle--open & {
         display: none;
     }
 }
+
+
 
 .tabulator-traffic-light {
     display: inline-block;

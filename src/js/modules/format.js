@@ -540,12 +540,12 @@ Format.prototype.formatters = {
 			open = isOpen;
 
 			if(open){
-				el.classList.add("open");
+				el.classList.add("tabulator-responsive-collapse-toggle--open");
 				if(collapse){
 					collapse.style.display = '';
 				}
 			}else{
-				el.classList.remove("open");
+				el.classList.remove("tabulator-responsive-collapse-toggle--open");
 				if(collapse){
 					collapse.style.display = 'none';
 				}
@@ -553,7 +553,7 @@ Format.prototype.formatters = {
 		}
 
 		el.classList.add("tabulator-responsive-collapse-toggle");
-		el.innerHTML = "<span class='tabulator-responsive-collapse-toggle-open'>+</span><span class='tabulator-responsive-collapse-toggle-close'>-</span>";
+		el.innerHTML = "<span class='tabulator-responsive-collapse-toggle__open'>+</span><span class='tabulator-responsive-collapse-toggle__close'>-</span>";
 
 		cell.getElement().classList.add("tabulator-row-handle");
 
