@@ -203,13 +203,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         }
     }
 
-    //placeholder element for sortable columns
-    &.ui-sortable-helper {
-        position: absolute;
-        background-color: $headerBackgroundColor !important;
-        border: 1px solid $headerBorderColor;
-    }
-
     //styling child elements for sortable columns
     &.tabulator-sortable {
         .tabulator-col-title {
