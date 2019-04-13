@@ -294,8 +294,8 @@ Ajax.prototype.showLoader = function(){
 		this.hideLoader();
 
 		while(this.msgElement.firstChild) this.msgElement.removeChild(this.msgElement.firstChild);
-		this.msgElement.classList.remove("tabulator-error");
-		this.msgElement.classList.add("tabulator-loading");
+		this.msgElement.classList.remove("tabulator-loader-msg--error");
+		this.msgElement.classList.add("tabulator-loader-msg--loading");
 
 		if(this.loadingElement){
 			this.msgElement.appendChild(this.loadingElement);
@@ -311,8 +311,8 @@ Ajax.prototype.showError = function(){
 	this.hideLoader();
 
 	while(this.msgElement.firstChild) this.msgElement.removeChild(this.msgElement.firstChild);
-	this.msgElement.classList.remove("tabulator-loading");
-	this.msgElement.classList.add("tabulator-error");
+	this.msgElement.classList.remove("tabulator-loader-msg--loading");
+	this.msgElement.classList.add("tabulator-loader-msg--error");
 
 	if(this.errorElement){
 		this.msgElement.appendChild(this.errorElement);

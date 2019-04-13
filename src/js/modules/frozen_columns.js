@@ -150,7 +150,7 @@ FrozenColumns.prototype.layoutElement = function(element, column){
 		element.classList.add("tabulator-frozen");
 
 		if(column.modules.frozen.edge){
-			element.classList.add("tabulator-frozen-" + column.modules.frozen.position);
+			element.classList.add("tabulator-frozen--" + column.modules.frozen.position);
 		}
 	}
 };
