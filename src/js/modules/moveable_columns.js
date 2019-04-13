@@ -171,7 +171,7 @@ MoveColumns.prototype.startMove = function(e, column){
 
 	//create hover element
 	this.hoverElement = element.cloneNode(true);
-	this.hoverElement.classList.add("tabulator-moving");
+	this.hoverElement.classList.add("tabulator-col--moving");
 
 	this.table.columnManager.getElement().appendChild(this.hoverElement);
 

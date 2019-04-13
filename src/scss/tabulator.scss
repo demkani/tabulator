@@ -152,12 +152,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     vertical-align: bottom;
     overflow: hidden;
 
-    &.tabulator-moving {
-        position: absolute;
-        border: 1px solid $headerSeperatorColor;
-        background: darken($headerBackgroundColor, 10%);
-        pointer-events: none;
-    }
 
     //hold content of column header
     .tabulator-col-content {
@@ -285,6 +279,14 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
             }
         }
     }
+}
+
+// moving a tabulator-col
+.tabulator-col--moving {
+    position: absolute;
+    border: 1px solid $headerSeperatorColor;
+    background: darken($headerBackgroundColor, 10%);
+    pointer-events: none;
 }
 
 // Variant of column header element:
@@ -430,16 +432,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     min-height: $textSize + ($headerMargin * 2);
     background-color: $rowBackgroundColor;
 
-    &.tabulator-moving {
-        position: absolute;
-
-        border-top: 1px solid $rowBorderColor;
-        border-bottom: 1px solid $rowBorderColor;
-
-        pointer-events: none;
-        z-index: 15;
-    }
-
     // inside 'tabulator-header'
     .tabulator-header & {
         background: lighten($headerBackgroundColor, 5%) !important;
@@ -448,6 +440,15 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     .tabulator-footer & {
         background: lighten($footerBackgroundColor, 5%) !important;
     }
+}
+
+// moving a tabulator-row
+.tabulator-row--moving {
+    position: absolute;
+    pointer-events: none;
+    border-top: 1px solid $rowBorderColor;
+    border-bottom: 1px solid $rowBorderColor;
+    z-index: 15;
 }
 
 .tabulator-frozen {

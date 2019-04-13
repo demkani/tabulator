@@ -277,7 +277,7 @@ MoveRows.prototype.startMove = function(e, row){
 
 	//create hover element
 	this.hoverElement = element.cloneNode(true);
-	this.hoverElement.classList.add("tabulator-moving");
+	this.hoverElement.classList.add("tabulator-row--moving");
 
 	if(this.connection){
 		document.body.appendChild(this.hoverElement);
