@@ -799,14 +799,14 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     left: 0;
     height: 5px;
 
-    &.prev {
-        top: 0;
-        bottom: auto;
-    }
-
     &:hover {
         cursor: ns-resize;
     }
+}
+
+.tabulator-row-resize-handle--prev {
+    top: 0;
+    bottom: auto;
 }
 
 //holding div that contains loader and covers tabulator element to prevent interaction
