@@ -204,7 +204,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
     //hide left resize handle on first column
     &:first-child {
-        .tabulator-col-resize-handle.prev {
+        .tabulator__col-resize-handle--prev {
             display: none;
         }
     }
@@ -606,35 +606,39 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &.tabulator-editing {
-        border: 1px solid $editBoxColor;
-        padding: 0;
-
-        input,
-        select {
-            border: 1px;
-            background: transparent;
-        }
-    }
-
-    &.tabulator-validation-fail {
-        border: 1px solid $errorColor;
-        input,
-        select {
-            border: 1px;
-            background: transparent;
-
-            color: $errorColor;
-        }
-    }
-
     //hide left resize handle on first column
     &:first-child {
-        .tabulator-col-resize-handle.prev {
+        .tabulator__col-resize-handle--prev {
             display: none;
         }
     }
 }
+
+.tabulator-cell--editing {
+    border: 1px solid $editBoxColor;
+    padding: 0;
+
+    input,
+    select {
+        border: 1px;
+        background: transparent;
+    }
+}
+
+
+.tabulator-cell--validation-fail {
+    border: 1px solid $errorColor;
+    input,
+    select {
+        border: 1px;
+        background: transparent;
+
+        color: $errorColor;
+    }
+}
+
+
+
 
 //movable row handle
 .tabulator-cell--row-handle {
