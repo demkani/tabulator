@@ -235,44 +235,46 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
             }
         }
     }
+}
 
-    &.tabulator-col-vertical {
-        .tabulator-col-content {
-            .tabulator-col-title {
-                writing-mode: vertical-rl;
-                text-orientation: mixed;
 
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+.tabulator-col--vertical {
+    .tabulator-col-content {
+        .tabulator-col-title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &.tabulator-sortable {
+        .tabulator-col-title {
+            padding-right: 0;
+            padding-top: 20px;
         }
 
         &.tabulator-col-vertical-flip {
             .tabulator-col-title {
-                transform: rotate(180deg);
+                padding-right: 0;
+                padding-bottom: 20px;
             }
         }
 
-        &.tabulator-sortable {
-            .tabulator-col-title {
-                padding-right: 0;
-                padding-top: 20px;
-            }
-
-            &.tabulator-col-vertical-flip {
-                .tabulator-col-title {
-                    padding-right: 0;
-                    padding-bottom: 20px;
-                }
-            }
-
-            .tabulator-arrow {
-                right: calc(50% - 6px);
-            }
+        .tabulator-arrow {
+            right: calc(50% - 6px);
         }
     }
 }
+
+.tabulator-col--vertical--flip {
+    .tabulator-col-title {
+        transform: rotate(180deg);
+    }
+}
+
 
 // moving a tabulator-col
 .tabulator-col--moving {
