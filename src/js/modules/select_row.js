@@ -36,8 +36,8 @@ SelectRow.prototype.initializeRow = function(row){
 
 	//set row selection class
 	if(self.table.options.selectableCheck.call(this.table, row.getComponent())){
-		element.classList.add("tabulator--selectable");
-		element.classList.remove("tabulator--unselectable");
+		element.classList.add("tabulator-row--selectable");
+		element.classList.remove("tabulator-row--unselectable");
 
 		if(self.table.options.selectable && self.table.options.selectable != "highlight"){
 			if(self.table.options.selectableRangeMode && self.table.options.selectableRangeMode === "click"){
@@ -116,8 +116,8 @@ SelectRow.prototype.initializeRow = function(row){
 		}
 
 	}else{
-		element.classList.add("tabulator--unselectable");
-		element.classList.remove("tabulator--selectable");
+		element.classList.add("tabulator-row--unselectable");
+		element.classList.remove("tabulator-row--selectable");
 	}
 };
 
