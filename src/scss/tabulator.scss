@@ -106,19 +106,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         box-sizing: border-box;
         position: relative;
         padding: 4px;
-
-        //column sorter arrow
-        .tabulator-arrow {
-            display: inline-block;
-            position: absolute;
-            top: 9px;
-            right: 8px;
-            width: 0;
-            height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-bottom: 6px solid $sortArrowInactive;
-        }
     }
 
     //hide left resize handle on first column
@@ -136,26 +123,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
             background-color: darken($headerBackgroundColor, 10%);
         }
 
-        &[aria-sort="none"] {
-            .tabulator-col-content .tabulator-arrow {
-                border-top: none;
-                border-bottom: 6px solid $sortArrowInactive;
-            }
-        }
-
-        &[aria-sort="asc"] {
-            .tabulator-col-content .tabulator-arrow {
-                border-top: none;
-                border-bottom: 6px solid $sortArrowActive;
-            }
-        }
-
-        &[aria-sort="desc"] {
-            .tabulator-col-content .tabulator-arrow {
-                border-top: 6px solid $sortArrowActive;
-                border-bottom: none;
-            }
-        }
     }
 }
 
@@ -182,20 +149,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
 
 
-
-
-
-// Header Column
-// Variant: vertical
-.tabulator-col--vertical {
-
-    &.tabulator-sortable {
-
-        .tabulator-arrow {
-            right: calc(50% - 6px);
-        }
-    }
-}
 
 
 // Header Column
@@ -572,34 +525,9 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         padding-left: 110px;
     }
 
-    //sorting arrow
-    .tabulator-arrow {
-        display: inline-block;
-        width: 0;
-        height: 0;
-        margin-right: 16px;
-        border-top: 6px solid transparent;
-        border-bottom: 6px solid transparent;
-        border-right: 0;
-        border-left: 6px solid $sortArrowActive;
-        vertical-align: middle;
-    }
-
     span {
         margin-left: 10px;
         color: #d00;
-    }
-}
-
-// Group
-// Variant: visible
-.tabulator-row--group--visible {
-    .tabulator-arrow {
-        margin-right: 10px;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 6px solid $sortArrowActive;
-        border-bottom: 0;
     }
 }
 
@@ -703,6 +631,73 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 .tabulator-frozen--right {
     border-left: 2px solid $rowBorderColor;
 }
+
+
+
+// Arrow
+// -----------------------------------------------------------------------------
+// A tiny indicator which shows the direction of a sorting header column or
+// the 'open' state of a row group.
+.tabulator-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+    // inside a sortable col
+    .tabulator-sortable &{
+        position: absolute;
+        top: 9px;
+        right: 8px;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #bbb;
+        border-left: 6px solid transparent;
+    }
+
+    // inside a sortable col
+    // sort: none
+    [aria-sort="none"] & {
+        border-top: none;
+        border-bottom: 6px solid #bbb;
+    }
+
+    // inside a sortable col
+    // sort: asc
+    [aria-sort="asc"] & {
+        border-top: none;
+        border-bottom: 6px solid #666;
+    }
+
+    // inside a sortable col
+    // sort: desc
+    [aria-sort="desc"] & {
+        border-top: 6px solid #666;
+        border-bottom: none;
+    }
+
+    // inside a vertical col
+    .tabulator-col--vertical & {
+        right: calc(50% - 6px);
+    }
+    // inside a row group
+    .tabulator-row--group & {
+        margin-right: 16px;
+        border-top: 6px solid transparent;
+        border-right: 0;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid #666;
+        vertical-align: middle;
+    }
+    
+    // inside a row group in 'visible' mode
+    .tabulator-row--group--visible & {
+        margin-right: 10px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #666;
+        border-bottom: 0;
+    }
+}
+
 
 // Data Tree
 // -----------------------------------------------------------------------------
