@@ -34,7 +34,10 @@ $footerBorderColor: #aaa !default; //footer border color
 $footerSeperatorColor: #999 !default; //footer bottom seperator color
 $footerActiveColor: #d00 !default; //footer bottom active text color
 
-//Tabulator Containing Element
+// -----------------------------------------------------------------------------
+// Tabulator Containing Element
+// Main wrapper element
+// -----------------------------------------------------------------------------
 .tabulator {
     position: relative;
 
@@ -53,66 +56,16 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     transform: translatez(0);
 }
 
-//scrolling element to hold table
-.tabulator-table-holder {
-    position: relative;
-    width: 100%;
-    white-space: nowrap;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-
-    &:focus {
-        outline: none;
-    }
-}
-
-//default placeholder element
-.tabulator-placeholder {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-
-    &[tabulator-render-mode="virtual"] {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-    }
-
-    width: 100%;
-
-    span {
-        display: inline-block;
-
-        margin: 0 auto;
-        padding: 10px;
-
-        color: #ccc;
-        font-weight: bold;
-        font-size: 20px;
-    }
-}
-
-//element to hold table rows
-.tabulator-table {
-    position: relative;
-    display: inline-block;
-    background-color: $rowBackgroundColor;
-    white-space: nowrap;
-    overflow: visible;
-    color: $rowTextColor;
-
-    [tabulator-layout="fitDataFill"] & {
-        min-width: 100%;
-    }
-}
-
-// tabulator variant when moving or resizing a column or row
+// Tabulator variant when moving or resizing a inner column or row
 .tabulator--block-select {
     user-select: none;
 }
 
-//column header containing element
+// -----------------------------------------------------------------------------
+// Header Element
+// -----------------------------------------------------------------------------
+
+// Header itself
 .tabulator-header {
     position: relative;
     box-sizing: border-box;
@@ -133,15 +86,11 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     -o-user-select: none;
 }
 
-.tabulator-frozen-rows-holder {
-    min-width: 400%;
+// Wrapper for 'tabulator-col'
+// .tabulator-headers {}
 
-    &:empty {
-        display: none;
-    }
-}
-
-//individual column header element
+// Header Column
+// Individual column header element, behaves (almost) same as a 'tabulator-cell'.
 .tabulator-col {
     display: inline-block;
     position: relative;
@@ -151,7 +100,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     text-align: left;
     vertical-align: bottom;
     overflow: hidden;
-
 
     //hold content of column header
     .tabulator-col-content {
@@ -237,7 +185,8 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-
+// Header Column
+// Variant: vertical
 .tabulator-col--vertical {
     .tabulator-col-content {
         .tabulator-col-title {
@@ -269,14 +218,16 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
+// Header Column
+// Variant: vertical flipped
 .tabulator-col--vertical--flip {
     .tabulator-col-title {
         transform: rotate(180deg);
     }
 }
 
-
-// moving a tabulator-col
+// Header Column
+// Variant: moving
 .tabulator-col--moving {
     position: absolute;
     border: 1px solid $headerSeperatorColor;
@@ -284,8 +235,8 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     pointer-events: none;
 }
 
-// Variant of column header element:
-// complex header column group
+// Header Column
+// Variant: grouped
 // .tabulator-col--group {}
 
 // Group inside a tabulator-col
@@ -325,7 +276,69 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-//footer element
+// -----------------------------------------------------------------------------
+// Main Element
+// -----------------------------------------------------------------------------
+// Scrolling Element to hold Table
+.tabulator-table-holder {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+//element to hold table rows
+.tabulator-table {
+    position: relative;
+    display: inline-block;
+    background-color: $rowBackgroundColor;
+    white-space: nowrap;
+    overflow: visible;
+    color: $rowTextColor;
+
+    [tabulator-layout="fitDataFill"] & {
+        min-width: 100%;
+    }
+}
+
+// default placeholder element
+// Placeholder for empty table
+.tabulator-placeholder {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    &[tabulator-render-mode="virtual"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    width: 100%;
+
+    span {
+        display: inline-block;
+
+        margin: 0 auto;
+        padding: 10px;
+
+        color: #ccc;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Footer Element
+// -----------------------------------------------------------------------------
+
+// Footer Wrapper
 .tabulator-footer {
     padding: 5px 10px;
     border-top: 1px solid $footerSeperatorColor;
@@ -340,6 +353,70 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+}
+
+// Pagination
+// -----------------------------------------------------------------------------
+
+// Pagination Wrapper
+.tabulator-paginator {
+    color: $footerTextColor;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+// Pagination 'Size' Select
+.tabulator-page-size {
+    display: inline-block;
+
+    margin: 0 5px;
+    padding: 2px 5px;
+
+    border: 1px solid $footerBorderColor;
+    border-radius: 3px;
+}
+
+// Pagination Button Wrapper for page numbers
+.tabulator-pages {
+    margin: 0 7px;
+}
+
+// Pagination Button
+.tabulator-page {
+    display: inline-block;
+
+    margin: 0 2px;
+    padding: 2px 5px;
+
+    border: 1px solid $footerBorderColor;
+    border-radius: 3px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    &.active {
+        color: $footerActiveColor;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+
+    &:not(.disabled) {
+        &:hover {
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+    }
+}
+
+.tabulator-frozen-rows-holder {
+    min-width: 400%;
+
+    &:empty {
+        display: none;
+    }
 }
 
 .tabulator-calcs-holder {
@@ -369,58 +446,11 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-.tabulator-paginator {
-    color: $footerTextColor;
-    font-family: inherit;
-    font-weight: inherit;
-    font-size: inherit;
-}
+// Row
+// -----------------------------------------------------------------------------
+// A Table Row inside 'tabulator-table'
 
-//pagination container element
-.tabulator-page-size {
-    display: inline-block;
-
-    margin: 0 5px;
-    padding: 2px 5px;
-
-    border: 1px solid $footerBorderColor;
-    border-radius: 3px;
-}
-
-.tabulator-pages {
-    margin: 0 7px;
-}
-
-//pagination button
-.tabulator-page {
-    display: inline-block;
-
-    margin: 0 2px;
-    padding: 2px 5px;
-
-    border: 1px solid $footerBorderColor;
-    border-radius: 3px;
-
-    background: rgba(255, 255, 255, 0.2);
-
-    &.active {
-        color: $footerActiveColor;
-    }
-
-    &:disabled {
-        opacity: 0.5;
-    }
-
-    &:not(.disabled) {
-        &:hover {
-            cursor: pointer;
-            background: rgba(0, 0, 0, 0.2);
-            color: #fff;
-        }
-    }
-}
-
-//row element
+// Row
 .tabulator-row {
     position: relative;
     box-sizing: border-box;
@@ -437,31 +467,14 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-// moving a tabulator-row
+// Row
+// Variant: moving
 .tabulator-row--moving {
     position: absolute;
     pointer-events: none;
     border-top: 1px solid $rowBorderColor;
     border-bottom: 1px solid $rowBorderColor;
     z-index: 15;
-}
-
-.tabulator-frozen {
-    display: inline-block;
-    position: absolute;
-    z-index: 10;
-    // inside a row
-    .tabulator-row & {
-        background-color: inherit;
-    }
-}
-
-.tabulator-frozen--left {
-    border-right: 2px solid $rowBorderColor;
-}
-
-.tabulator-frozen--right {
-    border-left: 2px solid $rowBorderColor;
 }
 
 .tabulator-row--even {
@@ -495,7 +508,12 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     border-top: 2px solid $rowBorderColor;
 }
 
-//row grouping element
+// Row Group
+// Variant of 'tabulator-row'
+// -----------------------------------------------------------------------------
+// Wrapper for grouped rows
+
+// Group
 .tabulator-row--group {
     box-sizing: border-box;
     border-bottom: 1px solid #999;
@@ -552,6 +570,8 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
+// Group
+// Variant: visible
 .tabulator-row--group--visible {
     .tabulator-arrow {
         margin-right: 10px;
@@ -562,6 +582,199 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
+// Cell
+// -----------------------------------------------------------------------------
+// A single cell element inside a table-row
+
+// Cell itself
+.tabulator-cell {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    padding: 4px;
+    border-right: 1px solid $rowBorderColor;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    //hide left resize handle on first column
+    &:first-child {
+        .tabulator__col-resize-handle--prev {
+            display: none;
+        }
+    }
+}
+
+// Cell
+// Variant: editing
+.tabulator-cell--editing {
+    border: 1px solid $editBoxColor;
+    padding: 0;
+
+    input,
+    select {
+        border: 1px;
+        background: transparent;
+    }
+}
+
+// Cell
+// Variant: validation fail
+.tabulator-cell--validation-fail {
+    border: 1px solid $errorColor;
+    input,
+    select {
+        border: 1px;
+        background: transparent;
+
+        color: $errorColor;
+    }
+}
+
+// Cell
+// Variant: contains a row-handle
+.tabulator-cell--row-handle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+// Cell Handle Holder
+.tabulator-cell--row-handle__box {
+    width: 80%;
+}
+
+// Cell Handle Hamburger Element
+.tabulator-cell--row-handle__bar {
+    width: 100%;
+    height: 3px;
+    margin-top: 2px;
+    background: #666;
+}
+
+// Frozen
+// -----------------------------------------------------------------------------
+// A fixed Table Cell.
+// A fixed Header Col.
+
+//
+.tabulator-frozen {
+    display: inline-block;
+    position: absolute;
+    z-index: 10;
+
+    // inside a row
+    .tabulator-row & {
+        background-color: inherit;
+    }
+}
+
+.tabulator-frozen--left {
+    border-right: 2px solid $rowBorderColor;
+}
+
+.tabulator-frozen--right {
+    border-left: 2px solid $rowBorderColor;
+}
+
+// Data Tree
+// -----------------------------------------------------------------------------
+
+// Branch: 'L' Icon
+.tabulator-data-tree-branch {
+    display: inline-block;
+    vertical-align: middle;
+
+    height: 9px;
+    width: 7px;
+
+    margin-top: -9px;
+    margin-right: 5px;
+
+    border-bottom-left-radius: 1px;
+
+    border-left: 2px solid $rowBorderColor;
+    border-bottom: 2px solid $rowBorderColor;
+}
+
+// Button to open and close nested data
+.tabulator-data-tree-control {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+
+    height: 11px;
+    width: 11px;
+
+    margin-right: 5px;
+
+    border: 1px solid $rowTextColor;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+
+    &:hover {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+// Control: '-' Collapse Icon
+.tabulator-data-tree-control-collapse {
+    display: inline-block;
+    position: relative;
+
+    height: 7px;
+    width: 1px;
+
+    background: transparent;
+
+    &:after {
+        position: absolute;
+        content: "";
+        left: -3px;
+        top: 3px;
+
+        height: 1px;
+        width: 7px;
+
+        background: $rowTextColor;
+    }
+}
+
+// Control: '+' Expand Icon
+.tabulator-data-tree-control-expand {
+    display: inline-block;
+    position: relative;
+
+    height: 7px;
+    width: 1px;
+
+    background: $rowTextColor;
+
+    &:after {
+        position: absolute;
+        content: "";
+        left: -3px;
+        top: 3px;
+
+        height: 1px;
+        width: 7px;
+
+        background: $rowTextColor;
+    }
+}
+
+// Responsive Collapse
+// -----------------------------------------------------------------------------
 // Wrapper for hideable content
 .tabulator-responsive-collapse {
     box-sizing: border-box;
@@ -590,159 +803,11 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-//cell element
-.tabulator-cell {
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    padding: 4px;
-    border-right: 1px solid $rowBorderColor;
-    vertical-align: middle;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+// Responsive Collapse Toggle
+// -----------------------------------------------------------------------------
+// A Button to open and close 'tabulator-responsive-collapse'
 
-    //hide left resize handle on first column
-    &:first-child {
-        .tabulator__col-resize-handle--prev {
-            display: none;
-        }
-    }
-}
-
-.tabulator-cell--editing {
-    border: 1px solid $editBoxColor;
-    padding: 0;
-
-    input,
-    select {
-        border: 1px;
-        background: transparent;
-    }
-}
-
-
-.tabulator-cell--validation-fail {
-    border: 1px solid $errorColor;
-    input,
-    select {
-        border: 1px;
-        background: transparent;
-
-        color: $errorColor;
-    }
-}
-
-
-
-
-//movable row handle
-.tabulator-cell--row-handle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-}
-
-//handle holder
-.tabulator-cell--row-handle__box {
-    width: 80%;
-}
-//Hamburger element
-.tabulator-cell--row-handle__bar {
-    width: 100%;
-    height: 3px;
-    margin-top: 2px;
-    background: #666;
-}
-
-.tabulator-data-tree-branch {
-    display: inline-block;
-    vertical-align: middle;
-
-    height: 9px;
-    width: 7px;
-
-    margin-top: -9px;
-    margin-right: 5px;
-
-    border-bottom-left-radius: 1px;
-
-    border-left: 2px solid $rowBorderColor;
-    border-bottom: 2px solid $rowBorderColor;
-}
-
-.tabulator-data-tree-control {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-
-    height: 11px;
-    width: 11px;
-
-    margin-right: 5px;
-
-    border: 1px solid $rowTextColor;
-    border-radius: 2px;
-    background: rgba(0, 0, 0, 0.1);
-
-    overflow: hidden;
-
-    &:hover {
-        cursor: pointer;
-        background: rgba(0, 0, 0, 0.2);
-    }
-}
-
-.tabulator-data-tree-control-collapse {
-    display: inline-block;
-    position: relative;
-
-    height: 7px;
-    width: 1px;
-
-    background: transparent;
-
-    &:after {
-        position: absolute;
-        content: "";
-        left: -3px;
-        top: 3px;
-
-        height: 1px;
-        width: 7px;
-
-        background: $rowTextColor;
-    }
-}
-
-.tabulator-data-tree-control-expand {
-    display: inline-block;
-    position: relative;
-
-    height: 7px;
-    width: 1px;
-
-    background: $rowTextColor;
-
-    &:after {
-        position: absolute;
-        content: "";
-        left: -3px;
-        top: 3px;
-
-        height: 1px;
-        width: 7px;
-
-        background: $rowTextColor;
-    }
-}
-
+// Toggle Wrapper
 .tabulator-responsive-collapse-toggle {
     display: inline-flex;
     align-items: center;
@@ -768,7 +833,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-// - close toggle
+// Toggle: '-' Close Icon
 .tabulator-responsive-collapse-toggle__close {
     display: none;
 
@@ -778,7 +843,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-// + open toggle
+// Toggle: '+' Open Icon
 .tabulator-responsive-collapse-toggle__open {
     // inside 'opened' toggle
     .tabulator-responsive-collapse-toggle--open & {
@@ -786,33 +851,12 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-.tabulator-traffic-light {
-    display: inline-block;
-    height: 14px;
-    width: 14px;
+// Loading View
+// -----------------------------------------------------------------------------
+// Holding div that contains loader and covers tabulator element to prevent
+// interaction
 
-    border-radius: 14px;
-}
-
-//row resize handles
-.tabulator-row-resize-handle {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 5px;
-
-    &:hover {
-        cursor: ns-resize;
-    }
-}
-
-.tabulator-row-resize-handle--prev {
-    top: 0;
-    bottom: auto;
-}
-
-//holding div that contains loader and covers tabulator element to prevent interaction
+// Loader Wrapper
 .tabulator-loader {
     position: absolute;
     display: flex;
@@ -828,7 +872,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     text-align: center;
 }
 
-//loading message element
+// Loader Message
 .tabulator-loader-msg {
     display: inline-block;
     margin: 0 auto;
@@ -839,18 +883,24 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     font-size: 16px;
 }
 
-//loading message
+// Loader Message
+// Variant: loading
 .tabulator-loader-msg--loading {
     border: 4px solid #333;
     color: #000;
 }
 
-//error message
+// Loader Message
+// Variant: error
 .tabulator-loader-msg--error {
     border: 4px solid #d00;
     color: #590000;
 }
 
+// Edit Mode : Select List
+// -----------------------------------------------------------------------------
+
+// List Wrapper
 .tabulator-edit-select-list {
     position: absolute;
     display: inline-block;
@@ -869,6 +919,18 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     z-index: 10000;
 }
 
+// List Item Group
+.tabulator-edit-select-list-group {
+    border-bottom: 1px solid $rowBorderColor;
+
+    padding: 4px;
+    padding-top: 6px;
+
+    color: $rowTextColor;
+    font-weight: bold;
+}
+
+// List Item
 .tabulator-edit-select-list-item {
     padding: 4px;
 
@@ -882,22 +944,50 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
+// List Item
+// Variant: active
 .tabulator-edit-select-list-item--active {
     color: $rowBackgroundColor;
     background: $editBoxColor;
 }
 
-.tabulator-edit-select-list-group {
-    border-bottom: 1px solid $rowBorderColor;
+// Traffic Light
+// -----------------------------------------------------------------------------
+.tabulator-traffic-light {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
 
-    padding: 4px;
-    padding-top: 6px;
-
-    color: $rowTextColor;
-    font-weight: bold;
+    border-radius: 14px;
 }
 
-// column resize handles (on the right side)
+// Row Resize Handles
+// -----------------------------------------------------------------------------
+
+// Row Resize Handle
+.tabulator-row-resize-handle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+
+    &:hover {
+        cursor: ns-resize;
+    }
+}
+
+// Row Resize Handle
+// Variant: on top
+.tabulator-row-resize-handle--prev {
+    top: 0;
+    bottom: auto;
+}
+
+// Column Resize Handles
+// -----------------------------------------------------------------------------
+
+// Column Resize Handles
 .tabulator__col-resize-handle {
     position: absolute;
     right: 0;
@@ -916,7 +1006,8 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-// column resize handles (on the left side)
+// Column Resize Handles
+// Variant : on the left side
 .tabulator__col-resize-handle--prev {
     left: 0;
     right: auto;
