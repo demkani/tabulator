@@ -107,17 +107,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         position: relative;
         padding: 4px;
 
-        //hold title of column header
-        .tabulator-col-title {
-            box-sizing: border-box;
-            width: 100%;
-
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            vertical-align: bottom;
-        }
-
         //column sorter arrow
         .tabulator-arrow {
             display: inline-block;
@@ -141,9 +130,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
     //styling child elements for sortable columns
     &.tabulator-sortable {
-        .tabulator-col-title {
-            padding-right: 25px;
-        }
 
         &:hover {
             cursor: pointer;
@@ -202,29 +188,8 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Header Column
 // Variant: vertical
 .tabulator-col--vertical {
-    .tabulator-col-content {
-        .tabulator-col-title {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
 
     &.tabulator-sortable {
-        .tabulator-col-title {
-            padding-right: 0;
-            padding-top: 20px;
-        }
-
-        &.tabulator-col--vertical--flip {
-            .tabulator-col-title {
-                padding-right: 0;
-                padding-bottom: 20px;
-            }
-        }
 
         .tabulator-arrow {
             right: calc(50% - 6px);
@@ -232,13 +197,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-// Header Column
-// Variant: vertical flipped
-.tabulator-col--vertical--flip {
-    .tabulator-col-title {
-        transform: rotate(180deg);
-    }
-}
 
 // Header Column
 // Variant: moving
@@ -289,6 +247,55 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         }
     }
 }
+
+
+// Header title
+.tabulator-col-title {
+    // default inside col
+    // .tabulator-col & {}
+
+    box-sizing: border-box;
+    width: 100%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+
+    // inside sortable col
+    .tabulator-sortable & {
+        padding-right: 25px;
+    }
+
+    // inside vertical col
+    .tabulator-col--vertical & {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // inside vertical flipped col
+    .tabulator-col--vertical--flip & {
+        transform: rotate(180deg);
+    }
+
+    //inside vertical and sortable col
+    .tabulator-col--vertical.tabulator-sortable & {
+        padding-right: 0;
+        padding-top: 20px;
+    }
+
+    // inside vertical flipped and sortable col
+    .tabulator-col--vertical--flip.tabulator-sortable & {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+
+}
+
 
 // -----------------------------------------------------------------------------
 // Main Element
