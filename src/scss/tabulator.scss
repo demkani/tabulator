@@ -430,15 +430,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     box-sizing: border-box;
     min-height: $textSize + ($headerMargin * 2);
     background-color: $rowBackgroundColor;
-
-    // inside 'tabulator-header'
-    .tabulator-header & {
-        background: lighten($headerBackgroundColor, 5%) !important;
-    }
-    // inside 'tabulator-footer'
-    .tabulator-footer & {
-        background: lighten($footerBackgroundColor, 5%) !important;
-    }
 }
 
 // Row
@@ -472,6 +463,15 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 .tabulator-row--calcs {
     font-weight: bold;
     background: darken($rowAltBackgroundColor, 5%) !important;
+    
+    // inside 'tabulator-header'
+    .tabulator-header & {
+        background: lighten($headerBackgroundColor, 5%) !important;
+    }
+    // inside 'tabulator-footer'
+    .tabulator-footer & {
+        background: lighten($footerBackgroundColor, 5%) !important;
+    }
 }
 
 .tabulator-row--calcs--top {
