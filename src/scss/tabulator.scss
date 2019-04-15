@@ -116,18 +116,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
             overflow: hidden;
             text-overflow: ellipsis;
             vertical-align: bottom;
-
-            //element to hold title editor
-            .tabulator-title-editor {
-                box-sizing: border-box;
-                width: 100%;
-
-                border: 1px solid #999;
-
-                padding: 1px;
-
-                background: #fff;
-            }
         }
 
         //column sorter arrow
@@ -184,6 +172,32 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         }
     }
 }
+
+
+
+
+
+//element to hold title editor
+.tabulator-title-editor {
+    box-sizing: border-box;
+    width: 100%;
+
+    border: 1px solid #999;
+
+    padding: 1px;
+
+    background: #fff;
+}
+
+
+
+
+
+
+
+
+
+
 
 // Header Column
 // Variant: vertical
