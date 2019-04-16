@@ -101,13 +101,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     vertical-align: bottom;
     overflow: hidden;
 
-    //hold content of column header
-    .tabulator-col-content {
-        box-sizing: border-box;
-        position: relative;
-        padding: 4px;
-    }
-
     //hide left resize handle on first column
     &:first-child {
         .tabulator__col-resize-handle--prev {
@@ -124,6 +117,13 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         }
 
     }
+}
+
+//hold content of column header
+.tabulator-col-content {
+    box-sizing: border-box;
+    position: relative;
+    padding: 4px;
 }
 
 
