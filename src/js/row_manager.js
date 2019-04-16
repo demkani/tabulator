@@ -46,7 +46,7 @@ var RowManager = function(table){
 RowManager.prototype.createHolderElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-table-holder");
+	el.classList.add("tabulator__table-holder");
 	el.setAttribute("tabindex", 0);
 
 	return el;
@@ -55,7 +55,7 @@ RowManager.prototype.createHolderElement = function (){
 RowManager.prototype.createTableElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-table");
+	el.classList.add("tabulator__table");
 
 	return el;
 };

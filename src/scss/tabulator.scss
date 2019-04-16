@@ -257,7 +257,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Main Element
 // -----------------------------------------------------------------------------
 // Scrolling Element to hold Table
-.tabulator-table-holder {
+.tabulator__table-holder {
     position: relative;
     width: 100%;
     white-space: nowrap;
@@ -270,7 +270,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 }
 
 //element to hold table rows
-.tabulator-table {
+.tabulator__table {
     position: relative;
     display: inline-block;
     background-color: $rowBackgroundColor;
@@ -425,7 +425,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
 // Row
 // -----------------------------------------------------------------------------
-// A Table Row inside 'tabulator-table'
+// A Table Row inside 'tabulator__table'
 
 // Row
 .tabulator-row {
