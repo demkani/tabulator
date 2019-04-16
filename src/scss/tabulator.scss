@@ -66,7 +66,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // -----------------------------------------------------------------------------
 
 // Header itself
-.tabulator-header {
+.tabulator__header {
     position: relative;
     box-sizing: border-box;
 
@@ -87,7 +87,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 }
 
 // Wrapper for 'tabulator-col'
-// .tabulator-headers {}
+// .tabulator__headers {}
 
 // Header Column
 // Individual column header element, behaves (almost) same as a 'tabulator-cell'.
@@ -180,7 +180,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 }
 
 //header filter containing element
-.tabulator-header-filter {
+.tabulator__header__filter {
     position: relative;
     box-sizing: border-box;
     margin-top: 2px;
@@ -400,7 +400,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     box-sizing: border-box;
     overflow: hidden;
 
-    .tabulator-header & {
+    .tabulator__header & {
         min-width: 400%;
         background: lighten($headerBackgroundColor, 5%) !important;
         border-top: 1px solid $rowBorderColor;
@@ -467,8 +467,8 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     font-weight: bold;
     background: darken($rowAltBackgroundColor, 5%) !important;
     
-    // inside 'tabulator-header'
-    .tabulator-header & {
+    // inside 'tabulator__header'
+    .tabulator__header & {
         background: lighten($headerBackgroundColor, 5%) !important;
     }
     // inside 'tabulator-footer'
@@ -1019,7 +1019,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 
     // inside header and footer
-    .tabulator-header &,
+    .tabulator__header &,
     .tabulator-footer & {
         display: none;
     }

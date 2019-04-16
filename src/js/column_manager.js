@@ -17,7 +17,7 @@ var ColumnManager = function(table){
 ColumnManager.prototype.createHeadersElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-headers");
+	el.classList.add("tabulator__headers");
 
 	return el;
 };
@@ -25,7 +25,7 @@ ColumnManager.prototype.createHeadersElement = function (){
 ColumnManager.prototype.createHeaderElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-header");
+	el.classList.add("tabulator__header");
 
 	return el;
 };

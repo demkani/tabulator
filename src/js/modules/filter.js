@@ -139,7 +139,7 @@ Filter.prototype.generateHeaderFilterElement = function(column, initialValue){
 		};
 
 		filterElement = document.createElement("div");
-		filterElement.classList.add("tabulator-header-filter");
+		filterElement.classList.add("tabulator__header__filter");
 
 		//set column editor
 		switch(typeof column.definition.headerFilter){
