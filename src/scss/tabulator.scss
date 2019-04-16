@@ -316,7 +316,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // -----------------------------------------------------------------------------
 
 // Footer Wrapper
-.tabulator-footer {
+.tabulator__footer {
     padding: 5px 10px;
     border-top: 1px solid $footerSeperatorColor;
     background-color: $footerBackgroundColor;
@@ -407,7 +407,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         border-bottom: 1px solid $headerBorderColor;
     }
 
-    .tabulator-footer & {
+    .tabulator__footer & {
         width: calc(100% + 20px);
         margin: -5px -10px 5px -10px;
         text-align: left;
@@ -471,8 +471,8 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     .tabulator__header & {
         background: lighten($headerBackgroundColor, 5%) !important;
     }
-    // inside 'tabulator-footer'
-    .tabulator-footer & {
+    // inside 'tabulator__footer'
+    .tabulator__footer & {
         background: lighten($footerBackgroundColor, 5%) !important;
     }
 }
@@ -1020,7 +1020,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
     // inside header and footer
     .tabulator__header &,
-    .tabulator-footer & {
+    .tabulator__footer & {
         display: none;
     }
 }

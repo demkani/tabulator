@@ -11,7 +11,7 @@ var FooterManager = function(table){
 FooterManager.prototype.createElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-footer");
+	el.classList.add("tabulator__footer");
 
 	return el;
 };
