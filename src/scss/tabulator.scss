@@ -108,15 +108,18 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         }
     }
 
-    //styling child elements for sortable columns
-    &.tabulator-sortable {
+}
 
-        &:hover {
-            cursor: pointer;
-            background-color: darken($headerBackgroundColor, 10%);
-        }
+// Header Column
+// Variant: sortable
+// styling child elements for sortable columns
+.tabulator-col--sortable {
 
+    &:hover {
+        cursor: pointer;
+        background-color: darken($headerBackgroundColor, 10%);
     }
+
 }
 
 //hold content of column header
@@ -216,7 +219,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     vertical-align: bottom;
 
     // inside sortable col
-    .tabulator-sortable & {
+    .tabulator-col--sortable & {
         padding-right: 25px;
     }
 
@@ -236,13 +239,13 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 
     //inside vertical and sortable col
-    .tabulator-col--vertical.tabulator-sortable & {
+    .tabulator-col--vertical.tabulator-col--sortable & {
         padding-right: 0;
         padding-top: 20px;
     }
 
     // inside vertical flipped and sortable col
-    .tabulator-col--vertical--flip.tabulator-sortable & {
+    .tabulator-col--vertical--flip.tabulator-col--sortable & {
         padding-top: 0;
         padding-bottom: 20px;
     }
@@ -644,7 +647,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     height: 0;
     
     // inside a sortable col
-    .tabulator-sortable &{
+    .tabulator-col--sortable &{
         position: absolute;
         top: 9px;
         right: 8px;
