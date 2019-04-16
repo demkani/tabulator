@@ -411,7 +411,7 @@ Tabulator.prototype._buildElement = function(){
 	if(typeof options.placeholder == "string"){
 
 		var el = document.createElement("div");
-		el.classList.add("tabulator-placeholder");
+		el.classList.add("tabulator__placeholder");
 
 		var span = document.createElement("span");
 		span.innerHTML = options.placeholder;
