@@ -106,7 +106,7 @@ Group.prototype.createElements = function(){
 	this.element.setAttribute("role", "rowgroup");
 
 	this.arrowElement = document.createElement("div");
-	this.arrowElement.classList.add("tabulator-arrow");
+	this.arrowElement.classList.add("tabulator__arrow");
 
 	//setup movable rows
 	if(this.groupManager.table.options.movableRows !== false && this.groupManager.table.modExists("moveRow")){

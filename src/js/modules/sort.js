@@ -41,7 +41,7 @@ Sort.prototype.initializeColumn = function(column, content){
 
 
 		arrowEl = document.createElement("div");
-		arrowEl.classList.add("tabulator-arrow");
+		arrowEl.classList.add("tabulator__arrow");
 		//create sorter arrow
 		content.appendChild(arrowEl);
 

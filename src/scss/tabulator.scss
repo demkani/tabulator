@@ -641,7 +641,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // -----------------------------------------------------------------------------
 // A tiny indicator which shows the direction of a sorting header column or
 // the 'open' state of a row group.
-.tabulator-arrow {
+.tabulator__arrow {
     display: inline-block;
     width: 0;
     height: 0;
