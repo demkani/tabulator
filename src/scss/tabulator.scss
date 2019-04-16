@@ -86,12 +86,12 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     -o-user-select: none;
 }
 
-// Wrapper for 'tabulator-col'
+// Wrapper for 'tabulator__col'
 // .tabulator__headers {}
 
 // Header Column
 // Individual column header element, behaves (almost) same as a 'tabulator-cell'.
-.tabulator-col {
+.tabulator__col {
     display: inline-block;
     position: relative;
     box-sizing: border-box;
@@ -103,7 +103,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
     //hide left resize handle on first column
     &:first-child {
-        .tabulator__col-resize-handle--prev {
+        .tabulator__col__resize-handle--prev {
             display: none;
         }
     }
@@ -113,7 +113,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Header Column
 // Variant: sortable
 // styling child elements for sortable columns
-.tabulator-col--sortable {
+.tabulator__col--sortable {
 
     &:hover {
         cursor: pointer;
@@ -123,7 +123,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 }
 
 //hold content of column header
-.tabulator-col-content {
+.tabulator__col__content {
     box-sizing: border-box;
     position: relative;
     padding: 4px;
@@ -156,7 +156,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
 // Header Column
 // Variant: moving
-.tabulator-col--moving {
+.tabulator__col--moving {
     position: absolute;
     border: 1px solid $headerSeperatorColor;
     background: darken($headerBackgroundColor, 10%);
@@ -165,16 +165,16 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
 // Header Column
 // Variant: grouped
-// .tabulator-col--group {}
+// .tabulator__col--group {}
 
-// Group inside a tabulator-col
-.tabulator-col__group {
+// Group inside a tabulator__col
+.tabulator__col__group {
     position: relative;
 
     border-top: 1px solid $headerBorderColor;
     overflow: hidden;
 
-    .tabulator-col:last-child {
+    .tabulator__col:last-child {
         margin-right: -1px;
     }
 }
@@ -206,9 +206,9 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
 
 // Header title
-.tabulator-col-title {
+.tabulator__col__title {
     // default inside col
-    // .tabulator-col & {}
+    // .tabulator__col & {}
 
     box-sizing: border-box;
     width: 100%;
@@ -219,12 +219,12 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     vertical-align: bottom;
 
     // inside sortable col
-    .tabulator-col--sortable & {
+    .tabulator__col--sortable & {
         padding-right: 25px;
     }
 
     // inside vertical col
-    .tabulator-col--vertical & {
+    .tabulator__col--vertical & {
         writing-mode: vertical-rl;
         text-orientation: mixed;
 
@@ -234,18 +234,18 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 
     // inside vertical flipped col
-    .tabulator-col--vertical--flip & {
+    .tabulator__col--vertical--flip & {
         transform: rotate(180deg);
     }
 
     //inside vertical and sortable col
-    .tabulator-col--vertical.tabulator-col--sortable & {
+    .tabulator__col--vertical.tabulator__col--sortable & {
         padding-right: 0;
         padding-top: 20px;
     }
 
     // inside vertical flipped and sortable col
-    .tabulator-col--vertical--flip.tabulator-col--sortable & {
+    .tabulator__col--vertical--flip.tabulator__col--sortable & {
         padding-top: 0;
         padding-bottom: 20px;
     }
@@ -552,7 +552,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
     //hide left resize handle on first column
     &:first-child {
-        .tabulator__col-resize-handle--prev {
+        .tabulator__col__resize-handle--prev {
             display: none;
         }
     }
@@ -647,7 +647,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     height: 0;
     
     // inside a sortable col
-    .tabulator-col--sortable &{
+    .tabulator__col--sortable &{
         position: absolute;
         top: 9px;
         right: 8px;
@@ -678,7 +678,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 
     // inside a vertical col
-    .tabulator-col--vertical & {
+    .tabulator__col--vertical & {
         right: calc(50% - 6px);
     }
     // inside a row group
@@ -1007,7 +1007,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // -----------------------------------------------------------------------------
 
 // Column Resize Handles
-.tabulator__col-resize-handle {
+.tabulator__col__resize-handle {
     position: absolute;
     right: 0;
     top: 0;
@@ -1027,7 +1027,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 
 // Column Resize Handles
 // Variant : on the left side
-.tabulator__col-resize-handle--prev {
+.tabulator__col__resize-handle--prev {
     left: 0;
     right: auto;
 }

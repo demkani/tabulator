@@ -21,8 +21,8 @@ var MoveColumns = function(table){
 MoveColumns.prototype.createPlaceholderElement = function(){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-col");
-	el.classList.add("tabulator-col-placeholder");
+	el.classList.add("tabulator__col");
+	el.classList.add("tabulator__col-placeholder");
 
 	return el;
 };
@@ -171,7 +171,7 @@ MoveColumns.prototype.startMove = function(e, column){
 
 	//create hover element
 	this.hoverElement = element.cloneNode(true);
-	this.hoverElement.classList.add("tabulator-col--moving");
+	this.hoverElement.classList.add("tabulator__col--moving");
 
 	this.table.columnManager.getElement().appendChild(this.hoverElement);
 

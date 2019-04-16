@@ -37,7 +37,7 @@ Sort.prototype.initializeColumn = function(column, content){
 
 		colEl = column.getElement();
 
-		colEl.classList.add("tabulator-col--sortable");
+		colEl.classList.add("tabulator__col--sortable");
 
 
 		arrowEl = document.createElement("div");

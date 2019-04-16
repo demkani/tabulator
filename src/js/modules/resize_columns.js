@@ -21,11 +21,11 @@ ResizeColumns.prototype.initializeColumn = function(type, column, element){
 	if(mode === true || mode == type){
 
 		var handle = document.createElement('div');
-		handle.className = "tabulator__col-resize-handle";
+		handle.className = "tabulator__col__resize-handle";
 
 
 		var prevHandle = document.createElement('div');
-		prevHandle.className = "tabulator__col-resize-handle tabulator__col-resize-handle--prev";
+		prevHandle.className = "tabulator__col__resize-handle tabulator__col__resize-handle--prev";
 
 		handle.addEventListener("click", function(e){
 			e.stopPropagation();

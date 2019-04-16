@@ -194,7 +194,7 @@ var Column = function(def, parent){
 Column.prototype.createElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-col");
+	el.classList.add("tabulator__col");
 	el.setAttribute("role", "columnheader");
 	el.setAttribute("aria-sort", "none");
 
@@ -204,7 +204,7 @@ Column.prototype.createElement = function (){
 Column.prototype.createGroupElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-col__group");
+	el.classList.add("tabulator__col__group");
 
 	return el;
 };
@@ -279,10 +279,10 @@ Column.prototype._buildHeader = function(){
 	while(self.element.firstChild) self.element.removeChild(self.element.firstChild);
 
 	if(def.headerVertical){
-		self.element.classList.add("tabulator-col--vertical");
+		self.element.classList.add("tabulator__col--vertical");
 
 		if(def.headerVertical === "flip"){
-			self.element.classList.add("tabulator-col--vertical--flip");
+			self.element.classList.add("tabulator__col--vertical--flip");
 		}
 	}
 
@@ -558,7 +558,7 @@ Column.prototype._buildColumnHeaderContent = function(){
 	table = self.table;
 
 	var contentElement = document.createElement("div");
-	contentElement.classList.add("tabulator-col-content");
+	contentElement.classList.add("tabulator__col__content");
 
 	contentElement.appendChild(self._buildColumnHeaderTitle());
 
@@ -573,7 +573,7 @@ Column.prototype._buildColumnHeaderTitle = function(){
 	title;
 
 	var titleHolderElement = document.createElement("div");
-	titleHolderElement.classList.add("tabulator-col-title");
+	titleHolderElement.classList.add("tabulator__col__title");
 
 	if(def.editableTitle){
 		var titleElement = document.createElement("input");
@@ -658,7 +658,7 @@ Column.prototype._formatColumnHeaderTitle = function(el, title){
 
 //build header element for column group
 Column.prototype._buildGroupHeader = function(){
-	this.element.classList.add("tabulator-col--group");
+	this.element.classList.add("tabulator__col--group");
 	this.element.setAttribute("role", "columngroup");
 	this.element.setAttribute("aria-title", this.definition.title);
 
