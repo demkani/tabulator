@@ -466,6 +466,16 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 .tabulator-row--calcs {
     font-weight: bold;
     background: darken($rowAltBackgroundColor, 5%) !important;
+
+    
+    .tabulator-row--calcs--top {
+        border-bottom: 2px solid $rowBorderColor;
+    }
+
+    .tabulator-row--calcs--bottom {
+        border-top: 2px solid $rowBorderColor;
+    }
+
     
     // inside 'tabulator__header'
     .tabulator__header & {
@@ -475,14 +485,6 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     .tabulator__footer & {
         background: lighten($footerBackgroundColor, 5%) !important;
     }
-}
-
-.tabulator-row--calcs--top {
-    border-bottom: 2px solid $rowBorderColor;
-}
-
-.tabulator-row--calcs--bottom {
-    border-top: 2px solid $rowBorderColor;
 }
 
 // Row Group
