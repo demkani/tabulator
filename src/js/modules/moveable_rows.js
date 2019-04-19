@@ -28,8 +28,8 @@ var MoveRows = function(table){
 MoveRows.prototype.createPlaceholderElement = function(){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-row");
-	el.classList.add("tabulator-row-placeholder");
+	el.classList.add("tabulator__row");
+	el.classList.add("tabulator__row-placeholder");
 
 	return el;
 };
@@ -277,7 +277,7 @@ MoveRows.prototype.startMove = function(e, row){
 
 	//create hover element
 	this.hoverElement = element.cloneNode(true);
-	this.hoverElement.classList.add("tabulator-row--moving");
+	this.hoverElement.classList.add("tabulator__row--moving");
 
 	if(this.connection){
 		document.body.appendChild(this.hoverElement);

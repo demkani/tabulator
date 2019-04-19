@@ -380,7 +380,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Row
 // -----------------------------------------------------------------------------
 // A Table Row inside Table
-.tabulator-row {
+.tabulator__row {
     position: relative;
     box-sizing: border-box;
     min-height: $textSize + ($headerMargin * 2);
@@ -391,7 +391,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: moving
 // ---
 // Row Variant while moving
-.tabulator-row--moving {
+.tabulator__row--moving {
     position: absolute;
     pointer-events: none;
     border-top: 1px solid $rowBorderColor;
@@ -400,27 +400,45 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 }
 
 // Row
+// Variant: editing
+// ---
+// Row Variant while moving
+// .tabulator__row--editing {}
+
+// Row
 // Variant: even
 // ---
 // Row Variant when it's an even Row
-.tabulator-row--even {
+.tabulator__row--even {
     background-color: $rowAltBackgroundColor;
 }
+
+// Row
+// Variant: odd
+// ---
+// Row Variant when it's an odd Row
+// .tabulator__row--odd {}
 
 // Row
 // Variant: selectable
 // ---
 // Row Variant when it's a selectable Row
-.tabulator-row--selectable:hover {
+.tabulator__row--selectable:hover {
     background-color: $rowHoverBackground;
     cursor: pointer;
 }
 
 // Row
+// Variant: unselectable
+// ---
+// Row Variant when it's a selectable Row
+// .tabulator__row--unselectable {}
+
+// Row
 // Variant: selected
 // ---
 // Row Variant when the Row is selected by User
-.tabulator-row--selected {
+.tabulator__row--selected {
     background-color: $rowSelectedBackground;
 
     &:hover {
@@ -433,7 +451,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: calcs
 // ---
 // Row Variant when it shows calcualted Values
-.tabulator-row--calcs {
+.tabulator__row--calcs {
     font-weight: bold;
     background: darken($rowAltBackgroundColor, 5%) !important;
 
@@ -441,7 +459,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     // Variant: calcs top
     // ---
     // Row Variant when it's on the upper edge of the Table
-    &.tabulator-row--calcs--top {
+    &.tabulator__row--calcs--top {
         border-bottom: 2px solid $rowBorderColor;
     }
 
@@ -449,7 +467,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     // Variant: calcs bottom
     // ---
     // Row Variant when it's on the lower edge of the Table
-    &.tabulator-row--calcs--bottom {
+    &.tabulator__row--calcs--bottom {
         border-top: 2px solid $rowBorderColor;
     }
 
@@ -467,7 +485,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: group
 // ---
 // Wrapper for grouped Rows
-.tabulator-row--group {
+.tabulator__row--group {
     box-sizing: border-box;
     border-bottom: 1px solid #999;
     border-right: 1px solid $rowBorderColor;
@@ -873,7 +891,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     z-index: 10;
 
     // Inside a Row
-    .tabulator-row & {
+    .tabulator__row & {
         background-color: inherit;
     }
 }
@@ -1034,7 +1052,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 
     // Inside a Row Group
-    .tabulator-row--group & {
+    .tabulator__row--group & {
         margin-right: 16px;
         border-top: 6px solid transparent;
         border-right: 0;
@@ -1044,7 +1062,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 
     // Inside a Row Group in 'visible' Mode
-    .tabulator-row--group--visible & {
+    .tabulator__row--group--visible & {
         margin-right: 10px;
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;

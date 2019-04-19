@@ -83,7 +83,7 @@ Edit.prototype.clearEditor = function(){
 		cellEl.classList.remove("tabulator-cell--editing");
 		while(cellEl.firstChild) cellEl.removeChild(cellEl.firstChild);
 
-		cell.row.getElement().classList.remove("tabulator-row-editing");
+		cell.row.getElement().classList.remove("tabulator__row--editing");
 	}
 };
 
@@ -248,7 +248,7 @@ Edit.prototype.edit = function(cell, e, forceEdit){
 
 				if(cellEditor instanceof Node){
 					element.classList.add("tabulator-cell--editing");
-					cell.row.getElement().classList.add("tabulator-row-editing");
+					cell.row.getElement().classList.add("tabulator__row--editing");
 					while(element.firstChild) element.removeChild(element.firstChild);
 					element.appendChild(cellEditor);
 

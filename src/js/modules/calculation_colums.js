@@ -233,7 +233,7 @@ ColumnCalcs.prototype.generateRow = function(pos, data){
 		self.table.modules.mutator.enable();
 	}
 
-	row.getElement().classList.add("tabulator-row--calcs", "tabulator-row--calcs--" + pos);
+	row.getElement().classList.add("tabulator__row--calcs", "tabulator__row--calcs--" + pos);
 	row.type = "calc";
 
 	row.generateCells = function(){

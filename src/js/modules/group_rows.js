@@ -100,8 +100,8 @@ Group.prototype.wipe = function(){
 
 Group.prototype.createElements = function(){
 	this.element = document.createElement("div");
-	this.element.classList.add("tabulator-row");
-	this.element.classList.add("tabulator-row--group");
+	this.element.classList.add("tabulator__row");
+	this.element.classList.add("tabulator__row--group");
 	this.element.classList.add("tabulator-group-level-" + this.level);
 	this.element.setAttribute("role", "rowgroup");
 
@@ -483,7 +483,7 @@ Group.prototype.hide = function(){
 
 	if(this.groupManager.table.rowManager.getRenderMode() == "classic" && !this.groupManager.table.options.pagination){
 
-		this.element.classList.remove("tabulator-row--group--visible");
+		this.element.classList.remove("tabulator__row--group--visible");
 
 		if(this.groupList.length){
 			this.groupList.forEach(function(group){
@@ -519,7 +519,7 @@ Group.prototype.show = function(){
 
 	if(this.groupManager.table.rowManager.getRenderMode() == "classic" && !this.groupManager.table.options.pagination){
 
-		this.element.classList.add("tabulator-row--group--visible");
+		this.element.classList.add("tabulator__row--group--visible");
 
 		var prev = self.getElement();
 
@@ -636,9 +636,9 @@ Group.prototype.getElement = function(){
 	this._visSet();
 
 	if(this.visible){
-		this.element.classList.add("tabulator-row--group--visible");
+		this.element.classList.add("tabulator__row--group--visible");
 	}else{
-		this.element.classList.remove("tabulator-row--group--visible");
+		this.element.classList.remove("tabulator__row--group--visible");
 	}
 
 	for(var i = 0; i < this.element.childNodes.length; ++i){

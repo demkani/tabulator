@@ -36,8 +36,8 @@ SelectRow.prototype.initializeRow = function(row){
 
 	//set row selection class
 	if(self.table.options.selectableCheck.call(this.table, row.getComponent())){
-		element.classList.add("tabulator-row--selectable");
-		element.classList.remove("tabulator-row--unselectable");
+		element.classList.add("tabulator__row--selectable");
+		element.classList.remove("tabulator__row--unselectable");
 
 		if(self.table.options.selectable && self.table.options.selectable != "highlight"){
 			if(self.table.options.selectableRangeMode && self.table.options.selectableRangeMode === "click"){
@@ -116,8 +116,8 @@ SelectRow.prototype.initializeRow = function(row){
 		}
 
 	}else{
-		element.classList.add("tabulator-row--unselectable");
-		element.classList.remove("tabulator-row--selectable");
+		element.classList.add("tabulator__row--unselectable");
+		element.classList.remove("tabulator__row--selectable");
 	}
 };
 
@@ -193,7 +193,7 @@ SelectRow.prototype._selectRow = function(rowInfo, silent, force){
 			}
 
 			row.modules.select.selected = true;
-			row.getElement().classList.add("tabulator-row--selected");
+			row.getElement().classList.add("tabulator__row--selected");
 
 			this.selectedRows.push(row);
 
@@ -258,7 +258,7 @@ SelectRow.prototype._deselectRow = function(rowInfo, silent){
 			}
 
 			row.modules.select.selected = false;
-			row.getElement().classList.remove("tabulator-row--selected");
+			row.getElement().classList.remove("tabulator__row--selected");
 			self.selectedRows.splice(index, 1);
 
 			if(!silent){

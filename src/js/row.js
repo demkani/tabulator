@@ -172,7 +172,7 @@ var Row = function(data, parent){
 Row.prototype.createElement = function (){
 	var el = document.createElement("div");
 
-	el.classList.add("tabulator-row");
+	el.classList.add("tabulator__row");
 	el.setAttribute("role", "row");
 
 	return el;

@@ -1273,11 +1273,11 @@ RowManager.prototype.styleRow = function(row, index){
 	var rowEl = row.getElement();
 
 	if(index % 2){
-		rowEl.classList.add("tabulator-row--even");
-		rowEl.classList.remove("tabulator-row-odd");
+		rowEl.classList.add("tabulator__row--even");
+		rowEl.classList.remove("tabulator__row--odd");
 	}else{
-		rowEl.classList.add("tabulator-row-odd");
-		rowEl.classList.remove("tabulator-row--even");
+		rowEl.classList.add("tabulator__row--odd");
+		rowEl.classList.remove("tabulator__row--even");
 	}
 };
 
