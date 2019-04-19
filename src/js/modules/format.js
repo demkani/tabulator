@@ -535,25 +535,25 @@ Format.prototype.formatters = {
 		el = document.createElement("div");
 
 		function toggleList(isOpen){
-			var collapse = cell.getRow().getElement().getElementsByClassName("tabulator-responsive-collapse")[0];
+			var collapse = cell.getRow().getElement().getElementsByClassName("tabulator__responsive-collapse")[0];
 
 			open = isOpen;
 
 			if(open){
-				el.classList.add("tabulator-responsive-collapse-toggle--open");
+				el.classList.add("tabulator__responsive-collapse__toggle--open");
 				if(collapse){
 					collapse.style.display = '';
 				}
 			}else{
-				el.classList.remove("tabulator-responsive-collapse-toggle--open");
+				el.classList.remove("tabulator__responsive-collapse__toggle--open");
 				if(collapse){
 					collapse.style.display = 'none';
 				}
 			}
 		}
 
-		el.classList.add("tabulator-responsive-collapse-toggle");
-		el.innerHTML = "<span class='tabulator-responsive-collapse-toggle__open'>+</span><span class='tabulator-responsive-collapse-toggle__close'>-</span>";
+		el.classList.add("tabulator__responsive-collapse__toggle");
+		el.innerHTML = "<span class='tabulator__responsive-collapse__toggle__open'>+</span><span class='tabulator__responsive-collapse__toggle__close'>-</span>";
 
 		cell.getElement().classList.add("tabulator-cell--row-handle");
 

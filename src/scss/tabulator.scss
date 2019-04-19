@@ -512,7 +512,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Responsive Collapse
 // -----------------------------------------------------------------------------
 // Wrapper for hideable content
-.tabulator-responsive-collapse {
+.tabulator__responsive-collapse {
     box-sizing: border-box;
 
     padding: 5px;
@@ -542,7 +542,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Responsive Collapse Toggle
 // ---
 // A Button to open and close 'tabulator-responsive-collapse'
-.tabulator-responsive-collapse-toggle {
+.tabulator__responsive-collapse__toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -567,14 +567,20 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
+// Responsive Collapse Toggle
+// Variant: open
+// ---
+// Variant of Collapse Toggle when 'Responsive Collapse' is opened
+// .tabulator__responsive-collapse__toggle--open
+
 // Responsive Collapse Toggle Close
 // ---
 // '-' Close Icon
-.tabulator-responsive-collapse-toggle__close {
+.tabulator__responsive-collapse__toggle__close {
     display: none;
 
     // Inside 'opened' Toggle
-    .tabulator-responsive-collapse-toggle--open & {
+    .tabulator__responsive-collapse__toggle--open & {
         display: initial;
     }
 }
@@ -582,9 +588,9 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Responsive Collapse Toggle Open
 // ---
 // '+' Open Icon
-.tabulator-responsive-collapse-toggle__open {
+.tabulator__responsive-collapse__toggle__open {
     // Inside 'opened' Toggle
-    .tabulator-responsive-collapse-toggle--open & {
+    .tabulator__responsive-collapse__toggle--open & {
         display: none;
     }
 }

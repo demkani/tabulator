@@ -57,7 +57,7 @@ ResponsiveLayout.prototype.layoutRow = function(row){
 	var rowEl = row.getElement(),
 	el = document.createElement("div");
 
-	el.classList.add("tabulator-responsive-collapse");
+	el.classList.add("tabulator__responsive-collapse");
 
 	if(!rowEl.classList.contains("tabulator-row--calcs")){
 		row.modules.responsiveLayout = {
