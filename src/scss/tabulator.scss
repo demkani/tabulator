@@ -689,14 +689,14 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Row Handle Box
 // -----------------------------------------------------------------------------
 // A Wrapper indside a 'Row Handle' Row for the Hamburger Menu Parts
-.tabulator-cell--row-handle__box {
+.tabulator__row-handle-box {
     width: 80%;
 }
 
 // Row Handle Bar
 // --
 // Part of the Hamburger Menu
-.tabulator-cell--row-handle__bar {
+.tabulator__row-handle-bar {
     width: 100%;
     height: 3px;
     margin-top: 2px;

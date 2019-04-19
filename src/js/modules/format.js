@@ -526,7 +526,7 @@ Format.prototype.formatters = {
 	//row handle
 	handle:function(cell, formatterParams, onRendered){
 		cell.getElement().classList.add("tabulator-cell--row-handle");
-		return "<div class='tabulator-cell--row-handle__box'><div class='tabulator-cell--row-handle__bar'></div><div class='tabulator-cell--row-handle__bar'></div><div class='tabulator-cell--row-handle__bar'></div></div>";
+		return "<div class='tabulator__row-handle-box'><div class='tabulator__row-handle-bar'></div><div class='tabulator__row-handle-bar'></div><div class='tabulator__row-handle-bar'></div></div>";
 	},
 
 	responsiveCollapse:function(cell, formatterParams, onRendered){
