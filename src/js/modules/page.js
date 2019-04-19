@@ -22,13 +22,13 @@ Page.prototype.createElements = function(){
 	var button;
 
 	this.element = document.createElement("span");
-	this.element.classList.add("tabulator-paginator");
+	this.element.classList.add("tabulator__paginator");
 
 	this.pagesElement = document.createElement("span");
-	this.pagesElement.classList.add("tabulator-pages");
+	this.pagesElement.classList.add("tabulator__pages");
 
 	button = document.createElement("button");
-	button.classList.add("tabulator-page");
+	button.classList.add("tabulator__page");
 	button.setAttribute("type", "button");
 	button.setAttribute("role", "button");
 	button.setAttribute("aria-label", "");
@@ -48,7 +48,7 @@ Page.prototype.createElements = function(){
 
 	if(this.table.options.paginationSizeSelector){
 		this.pageSizeSelect = document.createElement("select");
-		this.pageSizeSelect.classList.add("tabulator-page-size");
+		this.pageSizeSelect.classList.add("tabulator__page-size");
 	}
 
 };
@@ -355,9 +355,9 @@ Page.prototype._generatePageButton = function(page){
 	var self = this,
 	button = document.createElement("button");
 
-	button.classList.add("tabulator-page");
+	button.classList.add("tabulator__page");
 	if(page == self.page){
-		button.classList.add("active");
+		button.classList.add("tabulator__page--active");
 	}
 
 	button.setAttribute("type", "button");

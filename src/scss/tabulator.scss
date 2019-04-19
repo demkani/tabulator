@@ -788,7 +788,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Paginator
 // -----------------------------------------------------------------------------
 // Wrapper for all Pagination Parts
-.tabulator-paginator {
+.tabulator__paginator {
     color: $footerTextColor;
     font-family: inherit;
     font-weight: inherit;
@@ -798,7 +798,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Paginator 'Size' Select
 // ---
 // A Select Element to choose the Amount of Rows per Page.
-.tabulator-page-size {
+.tabulator__page-size {
     display: inline-block;
     margin: 0 5px;
     padding: 2px 5px;
@@ -809,28 +809,20 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Paginator Pages
 // ---
 // Pagination Wrapper for Page Number Buttons
-.tabulator-pages {
+.tabulator__pages {
     margin: 0 7px;
 }
 
 // Paginator Page
 // ---
 // Pagination Button
-.tabulator-page {
+.tabulator__page {
     display: inline-block;
     margin: 0 2px;
     padding: 2px 5px;
     border: 1px solid $footerBorderColor;
     border-radius: 3px;
     background: rgba(255, 255, 255, 0.2);
-
-    // Paginator Page
-    // Variant: active
-    // ---
-    // Active state of the Pagination Button
-    &.active {
-        color: $footerActiveColor;
-    }
 
     // Disabled state of the Pagination Button
     &:disabled {
@@ -845,6 +837,14 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
             color: #fff;
         }
     }
+}
+
+// Paginator Page
+// Variant: active
+// ---
+// Active state of the Pagination Button
+.tabulator__page--active {
+    color: $footerActiveColor;
 }
 
 // Frozen Rows Holder
