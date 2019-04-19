@@ -1050,7 +1050,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Select List
 // -----------------------------------------------------------------------------
 // A Dropdown List for editable Cells
-.tabulator-edit-select-list {
+.tabulator__select-list {
     position: absolute;
     display: inline-block;
     box-sizing: border-box;
@@ -1071,7 +1071,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Select List Item Group
 // ---
 // Grouped List Items
-.tabulator-edit-select-list-group {
+.tabulator__select-list__group {
     border-bottom: 1px solid $rowBorderColor;
 
     padding: 4px;
@@ -1084,7 +1084,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Select List Item
 // ---
 // A single Item Element indside the List
-.tabulator-edit-select-list-item {
+.tabulator__select-list__item {
     padding: 4px;
 
     color: $rowTextColor;
@@ -1101,7 +1101,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: active
 // ---
 // Item Variant when it's selected
-.tabulator-edit-select-list-item--active {
+.tabulator__select-list__item--active {
     color: $rowBackgroundColor;
     background: $editBoxColor;
 }

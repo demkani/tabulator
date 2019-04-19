@@ -677,12 +677,12 @@ Edit.prototype.editors = {
 
 					if(item.group){
 						el = document.createElement("div");
-						el.classList.add("tabulator-edit-select-list-group");
+						el.classList.add("tabulator__select-list__group");
 						el.tabIndex = 0;
 						el.innerHTML = item.label === "" ? "&nbsp;" : item.label;
 					}else{
 						el = document.createElement("div");
-						el.classList.add("tabulator-edit-select-list-item");
+						el.classList.add("tabulator__select-list__item");
 						el.tabIndex = 0;
 						el.innerHTML = item.label === "" ? "&nbsp;" : item.label;
 
@@ -692,7 +692,7 @@ Edit.prototype.editors = {
 						});
 
 						if(item === currentItem){
-							el.classList.add("tabulator-edit-select-list-item--active");
+							el.classList.add("tabulator__select-list__item--active");
 						}
 					}
 
@@ -717,7 +717,7 @@ Edit.prototype.editors = {
 		function setCurrentItem(item){
 
 			if(currentItem && currentItem.element){
-				currentItem.element.classList.remove("tabulator-edit-select-list-item--active");
+				currentItem.element.classList.remove("tabulator__select-list__item--active");
 			}
 
 
@@ -725,7 +725,7 @@ Edit.prototype.editors = {
 			input.value = item.label === "&nbsp;" ? "" : item.label;
 
 			if(item.element){
-				item.element.classList.add("tabulator-edit-select-list-item--active");
+				item.element.classList.add("tabulator__select-list__item--active");
 			}
 		}
 
@@ -850,7 +850,7 @@ Edit.prototype.editors = {
 
 		//style list element
 		listEl = document.createElement("div");
-		listEl.classList.add("tabulator-edit-select-list");
+		listEl.classList.add("tabulator__select-list");
 
 		onRendered(function(){
 			input.style.height = "100%";
@@ -1003,7 +1003,7 @@ Edit.prototype.editors = {
 
 				if(!el){
 					el = document.createElement("div");
-					el.classList.add("tabulator-edit-select-list-item");
+					el.classList.add("tabulator__select-list__item");
 					el.tabIndex = 0;
 					el.innerHTML = item.title;
 
@@ -1024,12 +1024,12 @@ Edit.prototype.editors = {
 
 					if(intialLoad && item.value == initialValue){
 						input.value = item.title;
-						item.element.classList.add("tabulator-edit-select-list-item--active");
+						item.element.classList.add("tabulator__select-list__item--active");
 						current = true;
 					}
 
 					if(item === currentItem){
-						item.element.classList.add("tabulator-edit-select-list-item--active");
+						item.element.classList.add("tabulator__select-list__item--active");
 						current = true;
 					}
 				}
@@ -1045,13 +1045,13 @@ Edit.prototype.editors = {
 
 		function setCurrentItem(item, showInputValue){
 			if(currentItem && currentItem.element){
-				currentItem.element.classList.remove("tabulator-edit-select-list-item--active");
+				currentItem.element.classList.remove("tabulator__select-list__item--active");
 			}
 
 			currentItem = item;
 
 			if(item && item.element){
-				item.element.classList.add("tabulator-edit-select-list-item--active");
+				item.element.classList.add("tabulator__select-list__item--active");
 			}
 		}
 
@@ -1216,7 +1216,7 @@ Edit.prototype.editors = {
 
 		//style list element
 		listEl = document.createElement("div");
-		listEl.classList.add("tabulator-edit-select-list");
+		listEl.classList.add("tabulator__select-list");
 
 		onRendered(function(){
 			input.style.height = "100%";
