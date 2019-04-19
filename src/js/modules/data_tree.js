@@ -25,7 +25,7 @@ DataTree.prototype.initialize = function(){
 
 		if(options.dataTreeBranchElement === true){
 			this.branchEl = document.createElement("div");
-			this.branchEl.classList.add("tabulator-data-tree-branch");
+			this.branchEl.classList.add("tabulator__data-tree__branch");
 		}else{
 			if(typeof options.dataTreeBranchElement === "string"){
 				dummyEl = document.createElement("div");
@@ -47,8 +47,8 @@ DataTree.prototype.initialize = function(){
 		}
 	}else{
 		this.collapseEl = document.createElement("div");
-		this.collapseEl.classList.add("tabulator-data-tree-control");
-		this.collapseEl.innerHTML = "<div class='tabulator-data-tree-control-collapse'></div>";
+		this.collapseEl.classList.add("tabulator__data-tree__control");
+		this.collapseEl.innerHTML = "<div class='tabulator__data-tree__control__collapse'></div>";
 	}
 
 	if(options.dataTreeExpandElement){
@@ -61,8 +61,8 @@ DataTree.prototype.initialize = function(){
 		}
 	}else{
 		this.expandEl = document.createElement("div");
-		this.expandEl.classList.add("tabulator-data-tree-control");
-		this.expandEl.innerHTML = "<div class='tabulator-data-tree-control-expand'></div>";
+		this.expandEl.classList.add("tabulator__data-tree__control");
+		this.expandEl.innerHTML = "<div class='tabulator__data-tree__control__expand'></div>";
 	}
 
 

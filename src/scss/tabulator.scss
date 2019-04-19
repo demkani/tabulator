@@ -594,7 +594,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Data Tree Branch
 // ---
 // The 'L' Icon which shows nested Rows
-.tabulator-data-tree-branch {
+.tabulator__data-tree__branch {
     display: inline-block;
     vertical-align: middle;
 
@@ -613,7 +613,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Data Tree Control
 // ---
 // Button to open and close nested Rows
-.tabulator-data-tree-control {
+.tabulator__data-tree__control {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -636,10 +636,10 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
     }
 }
 
-// Data Tree Control Collpase
+// Data Tree Control Collapse
 // ---
 // '-' Collapse Icon
-.tabulator-data-tree-control-collapse {
+.tabulator__data-tree__control__collapse {
     display: inline-block;
     position: relative;
 
@@ -664,7 +664,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Data Tree Control Expand
 // ---
 // '+' Expand Icon
-.tabulator-data-tree-control-expand {
+.tabulator__data-tree__control__expand {
     display: inline-block;
     position: relative;
 
