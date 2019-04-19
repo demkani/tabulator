@@ -850,7 +850,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Frozen Rows Holder
 // -----------------------------------------------------------------------------
 // Wrapper for 'frozen' Rows
-.tabulator-frozen-rows-holder {
+.tabulator__frozen-rows-holder {
     min-width: 400%;
 
     &:empty {
@@ -861,7 +861,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Frozen
 // -----------------------------------------------------------------------------
 // A fixed Table Cell or Header Column.
-.tabulator-frozen {
+.tabulator__frozen {
     display: inline-block;
     position: absolute;
     z-index: 10;
@@ -876,7 +876,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: left
 // ---
 // Variant for frozen Cells or Columns on the left side
-.tabulator-frozen--left {
+.tabulator__frozen--left {
     border-right: 2px solid $rowBorderColor;
 }
 
@@ -884,7 +884,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: right
 // ---
 // Variant for frozen Cells or Columns on the right side
-.tabulator-frozen--right {
+.tabulator__frozen--right {
     border-left: 2px solid $rowBorderColor;
 }
 

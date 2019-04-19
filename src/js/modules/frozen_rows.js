@@ -8,7 +8,7 @@ var FrozenRows = function(table){
 FrozenRows.prototype.initialize = function(){
 	this.rows = [];
 
-	this.topElement.classList.add("tabulator-frozen-rows-holder");
+	this.topElement.classList.add("tabulator__frozen-rows-holder");
 
 	// this.table.columnManager.element.append(this.topElement);
 	this.table.columnManager.getElement().insertBefore(this.topElement, this.table.columnManager.headersElement.nextSibling);

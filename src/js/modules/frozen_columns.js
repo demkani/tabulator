@@ -147,10 +147,10 @@ FrozenColumns.prototype.layoutElement = function(element, column){
 		element.style.position = "absolute";
 		element.style.left = column.modules.frozen.margin + "px";
 
-		element.classList.add("tabulator-frozen");
+		element.classList.add("tabulator__frozen");
 
 		if(column.modules.frozen.edge){
-			element.classList.add("tabulator-frozen--" + column.modules.frozen.position);
+			element.classList.add("tabulator__frozen--" + column.modules.frozen.position);
 		}
 	}
 };
