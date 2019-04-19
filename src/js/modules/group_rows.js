@@ -102,7 +102,7 @@ Group.prototype.createElements = function(){
 	this.element = document.createElement("div");
 	this.element.classList.add("tabulator__row");
 	this.element.classList.add("tabulator__row--group");
-	this.element.classList.add("tabulator-group-level-" + this.level);
+	this.element.classList.add("tabulator__row--group--level-" + this.level);
 	this.element.setAttribute("role", "rowgroup");
 
 	this.arrowElement = document.createElement("div");

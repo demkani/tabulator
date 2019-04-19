@@ -501,31 +501,21 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-    &.tabulator-group-level-1 {
-        padding-left: 30px;
-    }
-
-    &.tabulator-group-level-2 {
-        padding-left: 50px;
-    }
-
-    &.tabulator-group-level-3 {
-        padding-left: 70px;
-    }
-
-    &.tabulator-group-level-4 {
-        padding-left: 90px;
-    }
-
-    &.tabulator-group-level-5 {
-        padding-left: 110px;
-    }
-
     span {
         margin-left: 10px;
         color: #d00;
     }
 }
+
+// Row
+// Variant: group level
+// ---
+// Nested Variants of grouped Rows
+.tabulator__row--group--level-1 { padding-left: 30px; }
+.tabulator__row--group--level-2 { padding-left: 50px; }
+.tabulator__row--group--level-3 { padding-left: 70px; }
+.tabulator__row--group--level-4 { padding-left: 90px; }
+.tabulator__row--group--level-5 { padding-left: 110px; }
 
 // Responsive Collapse
 // -----------------------------------------------------------------------------
