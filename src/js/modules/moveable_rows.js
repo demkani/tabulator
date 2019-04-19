@@ -271,7 +271,7 @@ MoveRows.prototype.startMove = function(e, row){
 		element.parentNode.insertBefore(this.placeholderElement, element);
 		element.parentNode.removeChild(element);
 	}else{
-		this.table.element.classList.add("tabulator-movingrow-sending");
+		this.table.element.classList.add("tabulator--movingrow-sending");
 		this.connectToTables(row);
 	}
 
@@ -344,7 +344,7 @@ MoveRows.prototype.endMove = function(e){
 		document.body.removeEventListener("mouseup", this.endMove);
 
 		if(this.connection){
-			this.table.element.classList.remove("tabulator-movingrow-sending");
+			this.table.element.classList.remove("tabulator--movingrow-sending");
 			this.disconnectFromTables();
 		}
 	}
@@ -410,7 +410,7 @@ MoveRows.prototype.connect = function(table, row){
 		this.connectedTable = table;
 		this.connectedRow = row;
 
-		this.table.element.classList.add("tabulator-movingrow-receiving");
+		this.table.element.classList.add("tabulator--movingrow-receiving");
 
 		self.table.rowManager.getDisplayRows().forEach(function(row){
 			if(row.type === "row" && row.modules.moveRow && row.modules.moveRow.mouseup){
@@ -438,7 +438,7 @@ MoveRows.prototype.disconnect = function(table){
 		this.connectedTable = false;
 		this.connectedRow = false;
 
-		this.table.element.classList.remove("tabulator-movingrow-receiving");
+		this.table.element.classList.remove("tabulator--movingrow-receiving");
 
 		self.table.rowManager.getDisplayRows().forEach(function(row){
 			if(row.type === "row" && row.modules.moveRow && row.modules.moveRow.mouseup){
