@@ -383,7 +383,7 @@ Format.prototype.formatters = {
 			return;
 		}
 
-		el.classList.add("tabulator-traffic-light");
+		el.classList.add("tabulator__traffic-light");
 
 		//make sure value is in range
 		percentValue = parseFloat(value) <= max ? parseFloat(value) : max;
