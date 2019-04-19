@@ -927,7 +927,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Row Resize Handle
 // ---
 // By default on the lower edge of the Row
-.tabulator-row-resize-handle {
+.tabulator__row__resize-handle {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -943,7 +943,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: on top
 // ---
 // Resize Handle Variant on th eupper edge of the Row
-.tabulator-row-resize-handle--prev {
+.tabulator__row__resize-handle--prev {
     top: 0;
     bottom: auto;
 }

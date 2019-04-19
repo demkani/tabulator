@@ -12,10 +12,10 @@ ResizeRows.prototype.initializeRow = function(row){
 	rowEl = row.getElement();
 
 	var handle = document.createElement('div');
-	handle.className = "tabulator-row-resize-handle";
+	handle.className = "tabulator__row__resize-handle";
 
 	var prevHandle = document.createElement('div');
-	prevHandle.className = "tabulator-row-resize-handle tabulator-row-resize-handle--prev";
+	prevHandle.className = "tabulator__row__resize-handle tabulator__row__resize-handle--prev";
 
 	handle.addEventListener("click", function(e){
 		e.stopPropagation();
