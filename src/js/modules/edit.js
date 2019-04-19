@@ -1386,7 +1386,7 @@ Edit.prototype.editors = {
 		handle.style.top = "0";
 		handle.style.bottom = "0";
 		handle.style.width = "5px";
-		handle.classList.add("tabulator-progress-handle");
+		handle.classList.add("tabulator__progress-handle");
 
 		//style bar
 		bar.style.display = "inline-block";
