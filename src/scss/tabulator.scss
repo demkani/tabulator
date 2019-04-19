@@ -98,7 +98,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // -----------------------------------------------------------------------------
 // A Wrapper that covers the Tabulator to prevent interaction.
 // Contains a Loader.
-.tabulator-loader {
+.tabulator__loader {
     position: absolute;
     display: flex;
     align-items: center;
@@ -116,7 +116,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Loader Message
 // -----------------------------------------------------------------------------
 // A Message indes the Loader
-.tabulator-loader-msg {
+.tabulator__loader__msg {
     display: inline-block;
     margin: 0 auto;
     padding: 10px 20px;
@@ -130,7 +130,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: loading
 // ---
 // A Message Variant to visualize a loading state
-.tabulator-loader-msg--loading {
+.tabulator__loader__msg--loading {
     border: 4px solid #333;
     color: #000;
 }
@@ -139,7 +139,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: error
 // ---
 // A Message Variant to visualize an Error state
-.tabulator-loader-msg--error {
+.tabulator__loader__msg--error {
     border: 4px solid #d00;
     color: #590000;
 }
