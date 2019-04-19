@@ -15,7 +15,7 @@ var ColumnCalcs = function(table){
 
 ColumnCalcs.prototype.createElement = function (){
 	var el = document.createElement("div");
-	el.classList.add("tabulator-calcs-holder");
+	el.classList.add("tabulator__calcs-holder");
 	return el;
 };
 
