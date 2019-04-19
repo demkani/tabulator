@@ -730,7 +730,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Cell
 // -----------------------------------------------------------------------------
 // A single Cell Element inside a Row
-.tabulator-cell {
+.tabulator__cell {
     display: inline-block;
     position: relative;
     box-sizing: border-box;
@@ -753,7 +753,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: editing
 // ---
 // Cell Variant while in edit Mode
-.tabulator-cell--editing {
+.tabulator__cell--editing {
     border: 1px solid $editBoxColor;
     padding: 0;
 
@@ -768,7 +768,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: validation fail
 // ---
 // Cell Variant when showing a failed validation
-.tabulator-cell--validation-fail {
+.tabulator__cell--validation-fail {
     border: 1px solid $errorColor;
     input,
     select {
@@ -783,7 +783,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Variant: row-handle
 // --
 // Cell Variant when it contains a Row Handle
-.tabulator-cell--row-handle {
+.tabulator__cell--row-handle {
     display: inline-flex;
     align-items: center;
     justify-content: center;

@@ -79,8 +79,8 @@ Edit.prototype.clearEditor = function(){
 		this.currentCell = false;
 
 		cellEl = cell.getElement();
-		cellEl.classList.remove("tabulator-cell--validation-fail");
-		cellEl.classList.remove("tabulator-cell--editing");
+		cellEl.classList.remove("tabulator__cell--validation-fail");
+		cellEl.classList.remove("tabulator__cell--editing");
 		while(cellEl.firstChild) cellEl.removeChild(cellEl.firstChild);
 
 		cell.row.getElement().classList.remove("tabulator__row--editing");
@@ -112,7 +112,7 @@ Edit.prototype.bindEditor = function(cell){
 	element.setAttribute("tabindex", 0);
 
 	element.addEventListener("click", function(e){
-		if(!element.classList.contains("tabulator-cell--editing")){
+		if(!element.classList.contains("tabulator__cell--editing")){
 			element.focus();
 		}
 	});
@@ -175,7 +175,7 @@ Edit.prototype.edit = function(cell, e, forceEdit){
 				}
 			}else{
 				self.invalidEdit = true;
-				element.classList.add("tabulator-cell--validation-fail");
+				element.classList.add("tabulator__cell--validation-fail");
 				self.focusCellNoEvent(cell);
 				rendered();
 				self.table.options.validationFailed.call(self.table, cell.getComponent(), value, valid);
@@ -247,7 +247,7 @@ Edit.prototype.edit = function(cell, e, forceEdit){
 			if(cellEditor !== false){
 
 				if(cellEditor instanceof Node){
-					element.classList.add("tabulator-cell--editing");
+					element.classList.add("tabulator__cell--editing");
 					cell.row.getElement().classList.add("tabulator__row--editing");
 					while(element.firstChild) element.removeChild(element.firstChild);
 					element.appendChild(cellEditor);

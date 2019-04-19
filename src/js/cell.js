@@ -102,7 +102,7 @@ Cell.prototype.build = function(){
 
 Cell.prototype.generateElement = function(){
 	this.element = document.createElement('div');
-	this.element.className = "tabulator-cell";
+	this.element.className = "tabulator__cell";
 	this.element.setAttribute("role", "gridcell");
 	this.element = this.element;
 };

@@ -688,7 +688,7 @@ Clipboard.prototype.generateHTML = function (rows, columns, calcs, config, param
 		firstGroup = this.table.element.getElementsByClassName("tabulator__row--group")[0];
 
 		if(firstRow){
-			styleCells = firstRow.getElementsByClassName("tabulator-cell");
+			styleCells = firstRow.getElementsByClassName("tabulator__cell");
 			firstCell = styleCells[0];
 			lastCell = styleCells[styleCells.length - 1];
 		}
