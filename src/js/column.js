@@ -577,7 +577,7 @@ Column.prototype._buildColumnHeaderTitle = function(){
 
 	if(def.editableTitle){
 		var titleElement = document.createElement("input");
-		titleElement.classList.add("tabulator-title-editor");
+		titleElement.classList.add("tabulator__col__title__editor");
 
 		titleElement.addEventListener("click", function(e){
 			e.stopPropagation();

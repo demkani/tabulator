@@ -283,7 +283,7 @@ $footerActiveColor: #d00 !default; //footer bottom active text color
 // Header Column Editor
 // ---
 // Input Field to edit the Column Title
-.tabulator-title-editor {
+.tabulator__col__title__editor {
     box-sizing: border-box;
     width: 100%;
     border: 1px solid #999;
